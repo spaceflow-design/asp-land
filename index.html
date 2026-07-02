@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASP Land — Design Direction Preview</title>
+  <link rel="stylesheet" href="shared/css/fonts.css" />
+  <link rel="stylesheet" href="shared/css/tokens.css" />
+  <link rel="stylesheet" href="shared/css/reset.css" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: var(--color-bg-soft);
+    }
+
+    .chooser-header {
+      padding: var(--space-6) var(--container-pad);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .chooser-header img { height: 40px; }
+    .chooser-header .meta {
+      font-size: var(--fs-micro);
+      letter-spacing: var(--tracking-wide);
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    .chooser-hero {
+      padding: var(--space-10) var(--container-pad) var(--space-8);
+      max-width: var(--container-max);
+      margin-inline: auto;
+      width: 100%;
+    }
+    .chooser-hero .eyebrow {
+      margin-bottom: var(--space-5);
+    }
+    .chooser-hero h1 {
+      font-size: var(--fs-hero);
+      line-height: var(--lh-tight);
+      font-weight: 300;
+      max-width: 18ch;
+      margin-bottom: var(--space-5);
+    }
+    .chooser-hero h1 em {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--color-green-deep);
+    }
+    .chooser-hero p.lead {
+      font-size: var(--fs-lead);
+      color: var(--color-text-muted);
+      max-width: 60ch;
+      line-height: var(--lh-base);
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+      padding: 0 var(--container-pad) var(--space-10);
+      max-width: var(--container-max);
+      margin-inline: auto;
+      width: 100%;
+    }
+    @media (max-width: 960px) {
+      .options-grid { grid-template-columns: 1fr; }
+    }
+
+    .opt-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+      transition: transform var(--duration-base) var(--ease-out),
+                  box-shadow var(--duration-base) var(--ease-out),
+                  border-color var(--duration-base) var(--ease-out);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+    }
+    .opt-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-green-fresh);
+    }
+    .opt-card::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: var(--accent, var(--color-green-fresh));
+    }
+    .opt-card[data-opt="1"] { --accent: var(--color-green-bright); }
+    .opt-card[data-opt="2"] { --accent: var(--color-green-deep); }
+    .opt-card[data-opt="3"] { --accent: var(--color-green-fresh); }
+
+    .opt-preview {
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+      display: block;
+    }
+    .opt-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    .opt-card:hover .opt-preview img { transform: scale(1.05); }
+
+    /* Overlay + tag per direction */
+    .opt-preview::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .opt-card[data-opt="1"] .opt-preview::after {
+      background: linear-gradient(180deg, transparent 40%, rgba(26,26,26,0.35) 100%);
+    }
+    .opt-card[data-opt="2"] .opt-preview::after {
+      background: linear-gradient(180deg, rgba(11,27,20,0.25) 0%, rgba(11,27,20,0.55) 100%);
+    }
+    .opt-card[data-opt="3"] .opt-preview::after {
+      background:
+        radial-gradient(circle at 30% 80%, rgba(150,192,62,0.35), transparent 55%),
+        linear-gradient(180deg, transparent 40%, rgba(10,31,20,0.45) 100%);
+    }
+
+    .opt-preview__tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      z-index: 2;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 6px 10px;
+      background: var(--color-white);
+      color: var(--color-ink);
+    }
+    .opt-card[data-opt="2"] .opt-preview__tag {
+      background: var(--color-green-bright);
+      color: var(--color-ink);
+    }
+    .opt-card[data-opt="3"] .opt-preview__tag {
+      background: #C9F04B;
+      color: var(--color-ink);
+    }
+
+    .opt-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+    }
+    .opt-number {
+      font-size: var(--fs-micro);
+      letter-spacing: var(--tracking-x-wide);
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+    .opt-scope {
+      font-size: var(--fs-micro);
+      letter-spacing: var(--tracking-wide);
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .opt-title {
+      font-size: var(--fs-h3);
+      font-weight: 500;
+      letter-spacing: var(--tracking-tight);
+      line-height: var(--lh-snug);
+    }
+    .opt-desc {
+      color: var(--color-text-muted);
+      font-size: var(--fs-small);
+      line-height: var(--lh-base);
+    }
+    .opt-references {
+      font-size: var(--fs-micro);
+      color: var(--color-gray-500);
+      letter-spacing: 0.04em;
+    }
+    .opt-cta {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: var(--fs-small);
+      font-weight: 500;
+      color: var(--color-green-deep);
+      letter-spacing: 0.02em;
+    }
+    .opt-cta::after {
+      content: '→';
+      transition: transform var(--duration-fast) var(--ease-out);
+    }
+    .opt-card:hover .opt-cta::after {
+      transform: translateX(4px);
+    }
+
+    .chooser-footer {
+      margin-top: auto;
+      padding: var(--space-5) var(--container-pad);
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: var(--fs-micro);
+      color: var(--color-text-muted);
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="chooser-header">
+    <img src="shared/brand-graphic/logo.png" alt="ASP Land" />
+    <span class="meta">Design Direction Preview · 2026</span>
+  </header>
+
+  <section class="chooser-hero">
+    <p class="eyebrow">ASP Land × Savills · Website Concept</p>
+    <h1>Three directions, <em>one foundation.</em></h1>
+    <p class="lead">
+      Each option reinterprets the same content architecture through a distinct visual language —
+      from editorial restraint to institutional confidence to bold momentum.
+      Click through to explore the full experience.
+    </p>
+  </section>
+
+  <div class="options-grid">
+
+    <a class="opt-card" data-opt="1" href="option-1/index.html">
+      <div class="opt-preview" aria-label="Editorial direction preview">
+        <img src="shared/project-img/aerial-day.jpg" alt="Editorial direction preview" />
+        <span class="opt-preview__tag">Editorial</span>
+      </div>
+      <div class="opt-meta">
+        <span class="opt-number">Option 01</span>
+        <span class="opt-scope">Full Site</span>
+      </div>
+      <h2 class="opt-title">Editorial &amp; Restrained</h2>
+      <p class="opt-desc">
+        Minimal, generous whitespace, ESG-forward. The voice of a steward developer —
+        confident without being loud. Sustainability lives in the silence between elements.
+      </p>
+      <p class="opt-references">References · Stockland · UOL</p>
+      <span class="opt-cta">Explore the full site</span>
+    </a>
+
+    <a class="opt-card" data-opt="2" href="option-2/index.html">
+      <div class="opt-preview" aria-label="Institutional direction preview">
+        <img src="shared/project-img/tower-full-night.jpg" alt="Institutional direction preview" />
+        <span class="opt-preview__tag">Institutional</span>
+      </div>
+      <div class="opt-meta">
+        <span class="opt-number">Option 02</span>
+        <span class="opt-scope">Homepage</span>
+      </div>
+      <h2 class="opt-title">Institutional &amp; Global</h2>
+      <p class="opt-desc">
+        Financial-grade clarity. Data-led storytelling, dense typographic hierarchy,
+        and the cadence of an investor deck. Built to convince capital, not the public.
+      </p>
+      <p class="opt-references">Reference · WHA Industrial Estate</p>
+      <span class="opt-cta">Explore the homepage</span>
+    </a>
+
+    <a class="opt-card" data-opt="3" href="option-3/index.html">
+      <div class="opt-preview" aria-label="Bold direction preview">
+        <img src="shared/project-img/pathway.jpg" alt="Bold direction preview" />
+        <span class="opt-preview__tag">Bold · Kinetic</span>
+      </div>
+      <div class="opt-meta">
+        <span class="opt-number">Option 03</span>
+        <span class="opt-scope">Homepage</span>
+      </div>
+      <h2 class="opt-title">Bold &amp; In Motion</h2>
+      <p class="opt-desc">
+        Color forward. Saturated gradients, kinetic type, scroll-driven storytelling.
+        The voice of a category leader stepping into a new era of Vietnamese real estate.
+      </p>
+      <p class="opt-references">References · SK D&amp;D · The Crown Estate</p>
+      <span class="opt-cta">Explore the homepage</span>
+    </a>
+
+  </div>
+
+  <footer class="chooser-footer">
+    <span>© ASP Land. All Rights Reserved.</span>
+    <span>Prepared by Savills Place</span>
+  </footer>
+
+</body>
+</html>

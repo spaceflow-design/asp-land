@@ -1,0 +1,50 @@
+/* ============================================
+   SVN-Gotham — Primary brand font for ASP Land
+   Metric overrides normalize line-box height across
+   mixed OTF/TTF formats → consistent line spacing
+   even when bold em is inline with regular text.
+   ============================================ */
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('../fonts/SVN-Gotham Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('../fonts/SVN-Gotham Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('../fonts/SVN-Gotham Regular.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('../fonts/SVN-Gotham Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}

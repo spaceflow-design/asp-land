@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — ASP Land</title>
+  <meta name="description" content="Get in touch with ASP Land's leasing team, investor relations, or careers. Hanoi, Vietnam." />
+  <link rel="stylesheet" href="../shared/css/fonts.css" />
+  <link rel="stylesheet" href="../shared/css/tokens.css" />
+  <link rel="stylesheet" href="../shared/css/reset.css" />
+  <link rel="stylesheet" href="css/option-1.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="../index.html" class="site-header__logo" aria-label="ASP Land home">
+      <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Home</a></li>
+        <li><a class="site-nav__link" href="about.html">About</a></li>
+        <li><a class="site-nav__link" href="portfolio-industrial.html">Portfolio</a></li>
+        <li><a class="site-nav__link" href="news.html">News</a></li>
+        <li><a class="site-nav__link" aria-current="page" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="is-active">EN</button>
+        <span class="lang-switch__divider">/</span>
+        <button type="button">VI</button>
+      </div>
+    </nav>
+  </header>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <section class="page-hero" style="min-height: 50vh;">
+    <div class="page-hero__media">
+      <img src="../shared/project-img/lobby-side-day.jpg" alt="ASP Land Contact" />
+    </div>
+    <div class="page-hero__content">
+      <p class="eyebrow page-hero__eyebrow">Contact</p>
+      <h1 class="page-hero__title">Let's <em>build something enduring.</em></h1>
+      <p class="page-hero__subtitle">
+        Scouting an FDI site, exploring office space in Hanoi CBD, or evaluating a strategic partnership —
+        our team responds within one business day.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-cta reveal">
+    <div class="contact-cta__inner">
+      <div class="contact-cta__copy">
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">01 — Get in touch</p>
+        <h2>Speak with our <em>team.</em></h2>
+        <p>Tell us about your project. A dedicated consultant will follow up within one business day with tailored briefing materials.</p>
+
+        <dl class="contact-cta__details">
+          <div class="detail-row"><dt>Address</dt><dd>Hanoi, Vietnam</dd></div>
+          <div class="detail-row"><dt>Hotline</dt><dd>+84 (0) 24 XXXX XXXX</dd></div>
+          <div class="detail-row"><dt>Leasing</dt><dd>leasing@aspland.vn</dd></div>
+          <div class="detail-row"><dt>Investor relations</dt><dd>ir@aspland.vn</dd></div>
+          <div class="detail-row"><dt>Careers</dt><dd>careers@aspland.vn</dd></div>
+          <div class="detail-row"><dt>Press</dt><dd>press@aspland.vn</dd></div>
+        </dl>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — this is a demo form.');">
+        <div class="field">
+          <label for="cf-name">Name *</label>
+          <input id="cf-name" name="name" type="text" required placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" name="company" type="text" placeholder="Your company" />
+        </div>
+        <div class="field">
+          <label for="cf-phone">Phone</label>
+          <input id="cf-phone" name="phone" type="tel" placeholder="+84 ..." />
+        </div>
+        <div class="field">
+          <label for="cf-email">Email *</label>
+          <input id="cf-email" name="email" type="email" required placeholder="you@company.com" />
+        </div>
+        <div class="field">
+          <label for="cf-topic">Enquiry type</label>
+          <input id="cf-topic" name="topic" type="text" placeholder="e.g. Industrial site scouting" />
+        </div>
+        <div class="field">
+          <label for="cf-msg">Message *</label>
+          <textarea id="cf-msg" name="message" required placeholder="Tell us about your project, FDI focus, or site requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn">Submit enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- OUR CONSULTANTS -->
+  <section class="consultants reveal">
+    <div class="consultants__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">02 — Our Consultants</p>
+      <h2>Direct <em>contacts.</em></h2>
+    </div>
+
+    <div class="consultants__grid">
+      <div class="consultant-card">
+        <div class="consultant-card__avatar">DX</div>
+        <p class="consultant-card__role">Industrial Leasing</p>
+        <h3 class="consultant-card__name">Dinh Xuan Ha</h3>
+        <p style="color: var(--color-text-muted); font-size: var(--fs-small); line-height: var(--lh-base);">
+          Leads industrial park leasing across the Northern portfolio. Twelve years advising on
+          semiconductor and electronics FDI site selection in Vietnam.
+        </p>
+        <div class="consultant-card__contact">
+          <div><strong>Phone.</strong> +84 (0) 24 XXXX XXX1</div>
+          <div><strong>Email.</strong> ha.dx@aspland.vn</div>
+        </div>
+      </div>
+
+      <div class="consultant-card">
+        <div class="consultant-card__avatar">LM</div>
+        <p class="consultant-card__role">Office Leasing</p>
+        <h3 class="consultant-card__name">Le Minh Duc</h3>
+        <p style="color: var(--color-text-muted); font-size: var(--fs-small); line-height: var(--lh-base);">
+          Heads commercial and office leasing at ASP Central Hanoi Tower. Former head of Grade A
+          leasing at a major Hanoi CBD developer.
+        </p>
+        <div class="consultant-card__contact">
+          <div><strong>Phone.</strong> +84 (0) 24 XXXX XXX2</div>
+          <div><strong>Email.</strong> duc.lm@aspland.vn</div>
+        </div>
+      </div>
+
+      <div class="consultant-card">
+        <div class="consultant-card__avatar">NT</div>
+        <p class="consultant-card__role">Investor Relations</p>
+        <h3 class="consultant-card__name">Nguyen Thi Trang</h3>
+        <p style="color: var(--color-text-muted); font-size: var(--fs-small); line-height: var(--lh-base);">
+          Investor relations and strategic partnerships. Coordinates the ASP Land international
+          roadshow program and institutional investor outreach.
+        </p>
+        <div class="consultant-card__contact">
+          <div><strong>Phone.</strong> +84 (0) 24 XXXX XXX3</div>
+          <div><strong>Email.</strong> trang.nt@aspland.vn</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK WITH US -->
+  <section class="jobs reveal">
+    <div class="jobs__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">03 — Work with us</p>
+      <h2>Build the next generation of <em>Vietnamese industry.</em></h2>
+      <p>ASP Land is growing across leasing, investment, development, and sustainability functions. If you don't see the right role listed, send a speculative application to careers@aspland.vn.</p>
+    </div>
+
+    <div class="jobs__list">
+      <a href="#" class="job-row">
+        <div>
+          <h3 class="job-row__title">Senior Investment Analyst</h3>
+          <p class="job-row__type">Full-time · Hanoi</p>
+        </div>
+        <p class="job-row__desc">Support portfolio underwriting, feasibility modeling, and institutional investor materials for industrial and office developments across Northern Vietnam.</p>
+        <span class="job-row__cta">Learn more</span>
+      </a>
+
+      <a href="#" class="job-row">
+        <div>
+          <h3 class="job-row__title">Industrial Leasing Manager</h3>
+          <p class="job-row__type">Full-time · Bac Ninh</p>
+        </div>
+        <p class="job-row__desc">Lead multinational tenant relationships across Canh Thuy and Diem Thuy parks. FDI advisory experience and fluent English required.</p>
+        <span class="job-row__cta">Learn more</span>
+      </a>
+
+      <a href="#" class="job-row">
+        <div>
+          <h3 class="job-row__title">Sustainability Program Lead</h3>
+          <p class="job-row__type">Full-time · Hanoi</p>
+        </div>
+        <p class="job-row__desc">Own ASP Land's LEED certification pathway, ESG reporting, and carbon accounting across the industrial portfolio.</p>
+        <span class="job-row__cta">Learn more</span>
+      </a>
+
+      <a href="#" class="job-row">
+        <div>
+          <h3 class="job-row__title">Development Project Manager</h3>
+          <p class="job-row__type">Full-time · Hung Yen</p>
+        </div>
+        <p class="job-row__desc">Manage the Hiep Cuong Phase 1 construction program — coordinating contractors, consultants, and municipal approvals through 2027 handover.</p>
+        <span class="job-row__cta">Learn more</span>
+      </a>
+
+      <a href="#" class="job-row">
+        <div>
+          <h3 class="job-row__title">Marketing Manager — Industrial</h3>
+          <p class="job-row__type">Full-time · Hanoi</p>
+        </div>
+        <p class="job-row__desc">Lead brand and demand generation for the industrial portfolio, including international investor outreach in partnership with Savills.</p>
+        <span class="job-row__cta">Learn more</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+          <p class="tagline">Beyond Real Estate, We Build Enduring Foundations for Sustainable Growth.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Explore</p>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio-industrial.html">Portfolio</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Portfolio</p>
+          <ul>
+            <li><a href="portfolio-industrial.html">Industrial</a></li>
+            <li><a href="portfolio-office.html">Office</a></li>
+            <li><a href="#">Residential (coming soon)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contact</p>
+          <p>Hanoi, Vietnam<br />+84 (0) 24 XXXX XXXX<br />leasing@aspland.vn</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 ASP Land. All Rights Reserved.</span>
+        <span>Design preview — Savills Place</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared/js/site.js"></script>
+</body>
+</html>

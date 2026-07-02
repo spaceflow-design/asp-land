@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASP Land — Beyond Real Estate</title>
+  <meta name="description" content="ASP Land develops next-generation industrial ecosystems, integrated urban developments, and strategic infrastructure across Vietnam's growth corridors." />
+
+  <link rel="stylesheet" href="../shared/css/fonts.css" />
+  <link rel="stylesheet" href="../shared/css/tokens.css" />
+  <link rel="stylesheet" href="../shared/css/reset.css" />
+  <link rel="stylesheet" href="css/option-1.css" />
+
+  <!-- Leaflet for VN map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+
+  <!-- ============================================ HEADER ============================================ -->
+  <header class="site-header" data-overlay-hero>
+    <a href="../index.html" class="site-header__logo" aria-label="ASP Land home">
+      <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" aria-current="page" href="index.html">Home</a></li>
+        <li><a class="site-nav__link" href="about.html">About</a></li>
+        <li><a class="site-nav__link" href="portfolio-industrial.html">Portfolio</a></li>
+        <li><a class="site-nav__link" href="news.html">News</a></li>
+        <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="is-active">EN</button>
+        <span class="lang-switch__divider">/</span>
+        <button type="button">VI</button>
+      </div>
+    </nav>
+  </header>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- ============================================ HERO ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <img
+        src="../shared/project-img/aerial-night.jpg"
+        alt="Aerial view of ASP Land flagship development" />
+    </div>
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow">ASP Land · Est. 2025</p>
+      <h1 class="hero__title">
+        <span class="line"><span>Beyond real estate,</span></span>
+        <span class="line"><span>we build <em>enduring</em></span></span>
+        <span class="line"><span>foundations.</span></span>
+      </h1>
+      <div class="hero__meta">
+        <p class="hero__caption">
+          A next-generation developer of industrial ecosystems, purpose-built to attract high-value FDI
+          and drive Vietnam's growth into a new era.
+        </p>
+        <a href="#statement" class="hero__scroll">Begin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ STATEMENT ============================================ -->
+  <section class="statement reveal" id="statement">
+    <div class="statement__grid">
+      <div class="statement__label">
+        <p class="eyebrow">01 — About ASP Land</p>
+      </div>
+      <div class="statement__body">
+        <h2>
+          Building on a strong foundation within the <em>ASP ecosystem.</em>
+        </h2>
+        <p>
+          With roots in shipping, logistics, and infrastructure since 2012, ASP Land is positioned as
+          a developer of industrial and integrated real estate ecosystems. We leverage deep expertise
+          and established capabilities across the value chain to deliver projects that anchor long-term,
+          sustainable growth.
+        </p>
+        <p>
+          Our work is concentrated in Vietnam's most strategic northern growth corridors —
+          Quang Ninh, Thai Nguyen, Hung Yen, Bac Ninh — where industry, logistics, and urban life
+          converge.
+        </p>
+
+        <div class="statement__stats">
+          <div class="stat">
+            <div class="stat__value">3M+</div>
+            <div class="stat__label">DWT shipping capacity built since 2012</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">40,000B</div>
+            <div class="stat__label">VND in Quang Ninh mega infrastructure</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">4</div>
+            <div class="stat__label">Industrial parks across Northern Vietnam</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ CAPABILITIES ============================================ -->
+  <section class="capabilities reveal">
+    <div class="capabilities__intro">
+      <h2>Built to serve <em style="font-style:normal;font-weight:700;color:var(--color-green-deep)">evolving</em> investment needs.</h2>
+      <p>
+        Three integrated business lines, each engineered for resilience and long-horizon value.
+        From FDI-grade industrial parks to commercial real estate in central Hanoi, every project
+        is part of one ecosystem.
+      </p>
+    </div>
+
+    <div class="cap-grid">
+      <article class="cap-card">
+        <span class="cap-card__number">01</span>
+        <h3 class="cap-card__title">Industrial</h3>
+        <p class="cap-card__desc">
+          FDI-oriented industrial parks and clusters targeting semiconductor, electronics,
+          renewable energy, and high-tech manufacturing across Vietnam's northern growth corridors.
+        </p>
+        <span class="cap-card__status" data-status="active">Active · 4 parks</span>
+        <a href="portfolio-industrial.html" class="cap-card__link">Explore industrial</a>
+      </article>
+
+      <article class="cap-card">
+        <span class="cap-card__number">02</span>
+        <h3 class="cap-card__title">Office</h3>
+        <p class="cap-card__desc">
+          Commercial and office developments in Hanoi's central business district —
+          purpose-designed for multinational tenants and institutional investors.
+        </p>
+        <span class="cap-card__status" data-status="active">Active</span>
+        <a href="portfolio-office.html" class="cap-card__link">Explore office</a>
+      </article>
+
+      <article class="cap-card">
+        <span class="cap-card__number">03</span>
+        <h3 class="cap-card__title">Residential</h3>
+        <p class="cap-card__desc">
+          Integrated urban housing developments adjacent to industrial parks and commercial hubs —
+          part of ASP Land's long-term Mega-Ecosystem vision.
+        </p>
+        <span class="cap-card__status" data-status="future">In development</span>
+        <a href="#" class="cap-card__link">Coming soon</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================ MAP / PORTFOLIO ============================================ -->
+  <section class="portfolio-map reveal">
+    <div class="portfolio-map__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">02 — Our Portfolio</p>
+        <h2>Anchored across <em>Vietnam's</em> growth corridors.</h2>
+      </div>
+      <p>
+        Four industrial parks span Northern Vietnam's most strategic FDI destinations —
+        an integrated network connecting ports, highways, airports, and skilled labor pools.
+      </p>
+    </div>
+
+    <div class="portfolio-map__body">
+      <div class="map-container">
+        <div id="vn-map" aria-label="Map of ASP Land projects in Northern Vietnam"></div>
+      </div>
+
+      <div class="project-list">
+        <div class="project-list__head">
+          <span class="project-list__count">4 active projects</span>
+          <a href="portfolio-industrial.html" class="project-list__view-all">View all →</a>
+        </div>
+
+        <div class="project-row" data-project="quang-yen">
+          <span class="project-row__index">01</span>
+          <div>
+            <div class="project-row__name">Quang Yen Industrial Park</div>
+            <div class="project-row__loc">Quang Ninh</div>
+          </div>
+          <div class="project-row__area">1,192<span>hectares</span></div>
+        </div>
+
+        <div class="project-row" data-project="diem-thuy">
+          <span class="project-row__index">02</span>
+          <div>
+            <div class="project-row__name">Diem Thuy Industrial Park</div>
+            <div class="project-row__loc">Thai Nguyen</div>
+          </div>
+          <div class="project-row__area">350<span>hectares</span></div>
+        </div>
+
+        <div class="project-row" data-project="hiep-cuong">
+          <span class="project-row__index">03</span>
+          <div>
+            <div class="project-row__name">Hiep Cuong Industrial Park</div>
+            <div class="project-row__loc">Hung Yen</div>
+          </div>
+          <div class="project-row__area">410<span>hectares</span></div>
+        </div>
+
+        <div class="project-row" data-project="canh-thuy">
+          <span class="project-row__index">04</span>
+          <div>
+            <div class="project-row__name">Canh Thuy Industrial Park</div>
+            <div class="project-row__loc">Bac Ninh</div>
+          </div>
+          <div class="project-row__area">280<span>hectares</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ FEATURED PROJECTS ============================================ -->
+  <section class="featured reveal">
+    <div class="featured__head">
+      <h2>Featured <em style="font-style:normal;font-weight:700;color:var(--color-green-deep)">projects.</em></h2>
+      <p>
+        Three flagship developments shaping the future of industrial real estate in Northern Vietnam.
+      </p>
+    </div>
+
+    <div class="featured__list">
+
+      <a href="portfolio-quang-yen.html" class="feature-card">
+        <div class="feature-card__visual">
+          <img
+            src="../shared/project-img/tower-full-night.jpg"
+            alt="Quang Yen Industrial Park aerial view" />
+        </div>
+        <div class="feature-card__body">
+          <span class="feature-card__num">Project 01 · Quang Ninh</span>
+          <h3 class="feature-card__title">Quang Yen Industrial Park</h3>
+          <p style="color:var(--color-text-muted)">
+            A 1,192-hectare flagship anchored by deep-water port connectivity —
+            engineered for semiconductor, electronics, and renewable energy manufacturers.
+          </p>
+          <div class="feature-card__meta">
+            <div class="feature-card__meta-item">
+              <span>Total area</span>
+              <strong>1,192 ha</strong>
+            </div>
+            <div class="feature-card__meta-item">
+              <span>Status</span>
+              <strong>Master planning</strong>
+            </div>
+            <div class="feature-card__meta-item">
+              <span>Target</span>
+              <strong>Semiconductor · EV</strong>
+            </div>
+          </div>
+          <span class="feature-card__cta">View project</span>
+        </div>
+      </a>
+
+      <a href="portfolio-diem-thuy.html" class="feature-card">
+        <div class="feature-card__visual">
+          <img
+            src="../shared/project-img/entrance-main-night.jpg"
+            alt="Diem Thuy Industrial Park" />
+        </div>
+        <div class="feature-card__body">
+          <span class="feature-card__num">Project 02 · Thai Nguyen</span>
+          <h3 class="feature-card__title">Diem Thuy Industrial Park</h3>
+          <p style="color:var(--color-text-muted)">
+            350 hectares in Vietnam's electronics manufacturing capital, hosting global FDI tenants
+            with integrated worker housing and logistics infrastructure.
+          </p>
+          <div class="feature-card__meta">
+            <div class="feature-card__meta-item">
+              <span>Total area</span>
+              <strong>350 ha</strong>
+            </div>
+            <div class="feature-card__meta-item">
+              <span>Status</span>
+              <strong>Operational</strong>
+            </div>
+            <div class="feature-card__meta-item">
+              <span>Target</span>
+              <strong>Electronics · Tech</strong>
+            </div>
+          </div>
+          <span class="feature-card__cta">View project</span>
+        </div>
+      </a>
+
+      <a href="portfolio-hiep-cuong.html" class="feature-card">
+        <div class="feature-card__visual">
+          <img
+            src="../shared/project-img/rooftop-aerial.jpg"
+            alt="Hiep Cuong Industrial Park" />
+        </div>
+        <div class="feature-card__body">
+          <span class="feature-card__num">Project 03 · Hung Yen</span>
+          <h3 class="feature-card__title">Hiep Cuong Industrial Park</h3>
+          <p style="color:var(--color-text-muted)">
+            A 410-hectare integrated industrial-urban development positioned along the
+            Hanoi–Hai Phong expressway, targeting logistics and light manufacturing tenants.
+          </p>
+          <div class="feature-card__meta">
+            <div class="feature-card__meta-item">
+              <span>Total area</span>
+              <strong>410 ha</strong>
+            </div>
+            <div class="feature-card__meta-item">
+              <span>Status</span>
+              <strong>Under construction</strong>
+            </div>
+            <div class="feature-card__meta-item">
+              <span>Target</span>
+              <strong>Logistics · Light mfg.</strong>
+            </div>
+          </div>
+          <span class="feature-card__cta">View project</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============================================ MILESTONES ============================================ -->
+  <section class="milestones reveal">
+    <div class="milestones__head">
+      <p class="eyebrow">03 — Our Journey</p>
+      <h2>A decade of <em>foundational</em> growth.</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="timeline-step__year">2012</div>
+        <div class="timeline-step__title">Foundation</div>
+        <p class="timeline-step__desc">
+          Entry into international shipping and offshore logistics infrastructure.
+          Fleet scale exceeding 3,000,000 DWT.
+        </p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-step__year">2018</div>
+        <div class="timeline-step__title">Market Leadership</div>
+        <p class="timeline-step__desc">
+          Became the leading liquid cargo shipping operator in Vietnam,
+          accumulating strong financial capacity.
+        </p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-step__year">2024</div>
+        <div class="timeline-step__title">Infrastructure Expansion</div>
+        <p class="timeline-step__desc">
+          Launch of Quang Ninh mega infrastructure projects with total investment
+          exceeding 40,000 billion VND.
+        </p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-step__year">2025</div>
+        <div class="timeline-step__title">ASP Land Launches</div>
+        <p class="timeline-step__desc">
+          Establishment of ASP Land as a dedicated next-generation developer of integrated
+          industrial and urban ecosystems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ CONTACT CTA ============================================ -->
+  <section class="contact-cta reveal" id="contact">
+    <div class="contact-cta__inner">
+      <div class="contact-cta__copy">
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">04 — Begin a conversation</p>
+        <h2>Partner with a <em>steward developer.</em></h2>
+        <p>
+          Whether you're scouting an FDI site, exploring office space in Hanoi CBD,
+          or evaluating Vietnam as a long-term operating base — let's talk.
+        </p>
+
+        <dl class="contact-cta__details">
+          <div class="detail-row">
+            <dt>Address</dt>
+            <dd>Hanoi, Vietnam</dd>
+          </div>
+          <div class="detail-row">
+            <dt>Hotline</dt>
+            <dd>+84 (0) 24 XXXX XXXX</dd>
+          </div>
+          <div class="detail-row">
+            <dt>Email</dt>
+            <dd>leasing@aspland.vn</dd>
+          </div>
+        </dl>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — this is a demo form.');">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" required placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label for="cf-phone">Phone</label>
+          <input id="cf-phone" name="phone" type="tel" placeholder="+84 ..." />
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" required placeholder="you@company.com" />
+        </div>
+        <div class="field">
+          <label for="cf-msg">Message *</label>
+          <textarea id="cf-msg" name="message" required placeholder="Tell us about your project, FDI focus, or site requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn">Submit inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================ FOOTER ============================================ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+          <p class="tagline">Beyond Real Estate, We Build Enduring Foundations for Sustainable Growth.</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col__title">Explore</p>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio-industrial.html">Portfolio</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col__title">Portfolio</p>
+          <ul>
+            <li><a href="portfolio-industrial.html">Industrial</a></li>
+            <li><a href="portfolio-office.html">Office</a></li>
+            <li><a href="#">Residential (coming soon)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col__title">Contact</p>
+          <p>
+            Hanoi, Vietnam<br />
+            +84 (0) 24 XXXX XXXX<br />
+            leasing@aspland.vn
+          </p>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© 2026 ASP Land. All Rights Reserved.</span>
+        <span>Design preview — Savills Place</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ SCRIPTS ============================================ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../shared/js/site.js"></script>
+  <script src="../shared/js/vn-map.js"></script>
+</body>
+</html>

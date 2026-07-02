@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diem Thuy Industrial Park — ASP Land</title>
+  <meta name="description" content="350 hectares in Vietnam's electronics manufacturing capital — hosting global FDI tenants with integrated worker housing and logistics." />
+  <link rel="stylesheet" href="../shared/css/fonts.css" />
+  <link rel="stylesheet" href="../shared/css/tokens.css" />
+  <link rel="stylesheet" href="../shared/css/reset.css" />
+  <link rel="stylesheet" href="css/option-1.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="../index.html" class="site-header__logo" aria-label="ASP Land home">
+      <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Home</a></li>
+        <li><a class="site-nav__link" href="about.html">About</a></li>
+        <li><a class="site-nav__link" aria-current="page" href="portfolio-industrial.html">Portfolio</a></li>
+        <li><a class="site-nav__link" href="news.html">News</a></li>
+        <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="is-active">EN</button>
+        <span class="lang-switch__divider">/</span>
+        <button type="button">VI</button>
+      </div>
+    </nav>
+  </header>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <img src="../shared/project-img/entrance-main-night.jpg" alt="Diem Thuy Industrial Park" />
+    </div>
+    <div class="page-hero__content">
+      <p class="eyebrow page-hero__eyebrow">Project 02 · Thai Nguyen</p>
+      <h1 class="page-hero__title">Diem Thuy <em>Industrial Park.</em></h1>
+      <p class="page-hero__subtitle">
+        350 hectares in Vietnam's electronics manufacturing capital — the operational core of the
+        Samsung, LG, and Panasonic supply chain.
+      </p>
+    </div>
+  </section>
+
+  <div class="stats-bar reveal">
+    <div class="stats-bar__inner">
+      <div class="stats-bar__item"><span class="stats-bar__label">Total area</span><span class="stats-bar__value is-green">350 ha</span></div>
+      <div class="stats-bar__item"><span class="stats-bar__label">Status</span><span class="stats-bar__value">Operational</span></div>
+      <div class="stats-bar__item"><span class="stats-bar__label">Target industries</span><span class="stats-bar__value">Electronics · Tech</span></div>
+      <div class="stats-bar__item"><span class="stats-bar__label">Current workforce</span><span class="stats-bar__value">42,000+</span></div>
+    </div>
+  </div>
+
+  <section class="location-detail reveal">
+    <div class="location-detail__inner">
+      <div class="location-detail__map">
+        <div class="kcn-map"
+             data-lat="21.448"
+             data-lng="105.965"
+             data-name="Diem Thuy Industrial Park"
+             data-province="Thai Nguyen Province"
+             aria-label="Map of Diem Thuy Industrial Park"></div>
+      </div>
+      <div class="location-detail__info">
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">01 — Location</p>
+        <h2>Phu Binh District, <em>Thai Nguyen Province.</em></h2>
+        <p class="location-detail__coord">21.448° N · 105.965° E</p>
+        <ul class="connectivity-list">
+          <li><dt>National highway</dt><dd>Route 3 · direct access</dd></li>
+          <li><dt>International airport</dt><dd>Noi Bai · 45 km</dd></li>
+          <li><dt>Deep-water port</dt><dd>Hai Phong · 130 km</dd></li>
+          <li><dt>Urban center</dt><dd>Hanoi · 60 km · 75 min</dd></li>
+          <li><dt>Regional hub</dt><dd>Thai Nguyen City · 12 km</dd></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="usps reveal">
+    <div class="usps__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">02 — Key benefits</p>
+      <h2>Why Diem Thuy, <em>and why now.</em></h2>
+    </div>
+    <div class="usps__grid">
+      <article class="usp-card">
+        <span class="usp-card__num">01</span>
+        <h3 class="usp-card__title">Strategic location</h3>
+        <p class="usp-card__desc">The operational heart of Vietnam's electronics belt — anchored around Samsung's Thai Nguyen complex and the surrounding supplier ecosystem.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">02</span>
+        <h3 class="usp-card__title">Target industry</h3>
+        <p class="usp-card__desc">Consumer electronics, precision components, PCB assembly, and mobile device manufacturing.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">03</span>
+        <h3 class="usp-card__title">Integrated model</h3>
+        <p class="usp-card__desc">Existing worker housing, retail, healthcare, and training center already operational within the park.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">04</span>
+        <h3 class="usp-card__title">ESG &amp; sustainability</h3>
+        <p class="usp-card__desc">ISO 14001 certified operations. Continuous emissions monitoring and closed-loop water treatment.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">05</span>
+        <h3 class="usp-card__title">Infrastructure advantages</h3>
+        <p class="usp-card__desc">Fully built infrastructure — power, water, fiber, and road network operational and expandable.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="master-plan reveal">
+    <div class="master-plan__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">03 — Master plan</p>
+      <h2>An <em>operational</em> park with expansion capacity.</h2>
+    </div>
+    <figure class="master-plan__figure">
+      <img src="../shared/project-img/rooftop-day.jpg" alt="Diem Thuy master plan" />
+      <figcaption class="master-plan__caption">Operational site plan — expansion phase 2 currently under environmental review.</figcaption>
+    </figure>
+  </section>
+
+  <section class="specs reveal">
+    <div class="specs__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">04 — Project specifications</p>
+      <h2>The <em>numbers.</em></h2>
+    </div>
+    <dl class="specs__grid">
+      <div class="spec-row"><dt>Total area</dt><dd>350 hectares</dd></div>
+      <div class="spec-row"><dt>Industrial land</dt><dd>245 hectares (leased 82%)</dd></div>
+      <div class="spec-row"><dt>Amenities zone</dt><dd>45 hectares</dd></div>
+      <div class="spec-row"><dt>Green corridors</dt><dd>60 hectares</dd></div>
+      <div class="spec-row"><dt>Active tenants</dt><dd>38 firms (Samsung, LG, Panasonic supply chain)</dd></div>
+      <div class="spec-row"><dt>Current workforce</dt><dd>42,000+ employees</dd></div>
+      <div class="spec-row"><dt>Power capacity</dt><dd>110 kV substation, dedicated</dd></div>
+      <div class="spec-row"><dt>Water supply</dt><dd>30,000 m³/day operational</dd></div>
+      <div class="spec-row"><dt>Wastewater</dt><dd>25,000 m³/day treatment plant</dd></div>
+      <div class="spec-row"><dt>Amenities</dt><dd>Worker housing, canteen, clinic, training center</dd></div>
+    </dl>
+  </section>
+
+  <section class="related-projects reveal">
+    <div class="related-projects__head">
+      <h2>Other <em>ASP Industrial</em> parks.</h2>
+      <a href="portfolio-industrial.html" class="project-list__view-all">View all →</a>
+    </div>
+    <div class="related-grid">
+      <a href="portfolio-quang-yen.html" class="related-card">
+        <span class="related-card__num">01 · Quang Ninh</span>
+        <h3 class="related-card__title">Quang Yen Industrial Park</h3>
+        <div class="related-card__meta"><span>1,192 ha</span><span>Master planning</span></div>
+        <span class="related-card__cta">View project</span>
+      </a>
+      <a href="portfolio-hiep-cuong.html" class="related-card">
+        <span class="related-card__num">03 · Hung Yen</span>
+        <h3 class="related-card__title">Hiep Cuong Industrial Park</h3>
+        <div class="related-card__meta"><span>410 ha</span><span>Under construction</span></div>
+        <span class="related-card__cta">View project</span>
+      </a>
+      <a href="portfolio-canh-thuy.html" class="related-card">
+        <span class="related-card__num">04 · Bac Ninh</span>
+        <h3 class="related-card__title">Canh Thuy Industrial Park</h3>
+        <div class="related-card__meta"><span>280 ha</span><span>Master planning</span></div>
+        <span class="related-card__cta">View project</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-cta reveal">
+    <div class="contact-cta__inner">
+      <div class="contact-cta__copy">
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">Leasing enquiry</p>
+        <h2>Interested in <em>Diem Thuy?</em></h2>
+        <p>Explore available lots, view tenant list, or arrange an on-site tour with our Thai Nguyen team.</p>
+        <div style="margin-top: var(--space-6);"><a href="contact.html" class="btn">Request a briefing →</a></div>
+      </div>
+      <dl class="contact-cta__details">
+        <div class="detail-row"><dt>Contact</dt><dd>ASP Land — Thai Nguyen</dd></div>
+        <div class="detail-row"><dt>Hotline</dt><dd>+84 (0) 24 XXXX XXXX</dd></div>
+        <div class="detail-row"><dt>Email</dt><dd>diemthuy@aspland.vn</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+          <p class="tagline">Beyond Real Estate, We Build Enduring Foundations for Sustainable Growth.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Explore</p>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio-industrial.html">Portfolio</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Portfolio</p>
+          <ul>
+            <li><a href="portfolio-industrial.html">Industrial</a></li>
+            <li><a href="portfolio-office.html">Office</a></li>
+            <li><a href="#">Residential (coming soon)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contact</p>
+          <p>Hanoi, Vietnam<br />+84 (0) 24 XXXX XXXX<br />leasing@aspland.vn</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 ASP Land. All Rights Reserved.</span>
+        <span>Design preview — Savills Place</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../shared/js/site.js"></script>
+  <script src="../shared/js/kcn-map.js"></script>
+</body>
+</html>

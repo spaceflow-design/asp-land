@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canh Thuy Industrial Park — ASP Land</title>
+  <meta name="description" content="280 hectares in Vietnam's semiconductor corridor — targeting precision electronics, chip packaging, and next-generation display manufacturers." />
+  <link rel="stylesheet" href="../shared/css/fonts.css" />
+  <link rel="stylesheet" href="../shared/css/tokens.css" />
+  <link rel="stylesheet" href="../shared/css/reset.css" />
+  <link rel="stylesheet" href="css/option-1.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="../index.html" class="site-header__logo" aria-label="ASP Land home">
+      <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Home</a></li>
+        <li><a class="site-nav__link" href="about.html">About</a></li>
+        <li><a class="site-nav__link" aria-current="page" href="portfolio-industrial.html">Portfolio</a></li>
+        <li><a class="site-nav__link" href="news.html">News</a></li>
+        <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="is-active">EN</button>
+        <span class="lang-switch__divider">/</span>
+        <button type="button">VI</button>
+      </div>
+    </nav>
+  </header>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <img src="../shared/project-img/neighborhood-night.jpg" alt="Canh Thuy Industrial Park" />
+    </div>
+    <div class="page-hero__content">
+      <p class="eyebrow page-hero__eyebrow">Project 04 · Bac Ninh</p>
+      <h1 class="page-hero__title">Canh Thuy <em>Industrial Park.</em></h1>
+      <p class="page-hero__subtitle">
+        280 hectares in the heart of Vietnam's semiconductor corridor — targeting precision electronics,
+        chip packaging, and next-generation display manufacturers.
+      </p>
+    </div>
+  </section>
+
+  <div class="stats-bar reveal">
+    <div class="stats-bar__inner">
+      <div class="stats-bar__item"><span class="stats-bar__label">Total area</span><span class="stats-bar__value is-green">280 ha</span></div>
+      <div class="stats-bar__item"><span class="stats-bar__label">Status</span><span class="stats-bar__value">Master planning</span></div>
+      <div class="stats-bar__item"><span class="stats-bar__label">Target industries</span><span class="stats-bar__value">Semiconductor · Precision</span></div>
+      <div class="stats-bar__item"><span class="stats-bar__label">Projected workforce</span><span class="stats-bar__value">32,000+</span></div>
+    </div>
+  </div>
+
+  <section class="location-detail reveal">
+    <div class="location-detail__inner">
+      <div class="location-detail__map">
+        <div class="kcn-map"
+             data-lat="21.218"
+             data-lng="106.197"
+             data-name="Canh Thuy Industrial Park"
+             data-province="Bac Ninh Province"
+             aria-label="Map of Canh Thuy Industrial Park"></div>
+      </div>
+      <div class="location-detail__info">
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">01 — Location</p>
+        <h2>Yen Phong District, <em>Bac Ninh Province.</em></h2>
+        <p class="location-detail__coord">21.218° N · 106.197° E</p>
+        <ul class="connectivity-list">
+          <li><dt>National highway</dt><dd>Route 1A · direct access</dd></li>
+          <li><dt>International airport</dt><dd>Noi Bai · 25 km</dd></li>
+          <li><dt>Deep-water port</dt><dd>Hai Phong · 100 km</dd></li>
+          <li><dt>Urban center</dt><dd>Hanoi · 30 km · 40 min</dd></li>
+          <li><dt>Semiconductor cluster</dt><dd>Samsung, Amkor, Hana Micron within 15 km</dd></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="usps reveal">
+    <div class="usps__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">02 — Key benefits</p>
+      <h2>Why Canh Thuy, <em>and why now.</em></h2>
+    </div>
+    <div class="usps__grid">
+      <article class="usp-card">
+        <span class="usp-card__num">01</span>
+        <h3 class="usp-card__title">Strategic location</h3>
+        <p class="usp-card__desc">Positioned at the epicenter of Vietnam's semiconductor cluster — 15 km from Samsung, Amkor, and Hana Micron facilities.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">02</span>
+        <h3 class="usp-card__title">Target industry</h3>
+        <p class="usp-card__desc">Semiconductor packaging, chip testing, precision electronics, and next-generation display components.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">03</span>
+        <h3 class="usp-card__title">Integrated model</h3>
+        <p class="usp-card__desc">Purpose-built cleanroom pads (ISO Class 5 to Class 8), advanced dry-utility supply, and integrated R&amp;D + housing zones.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">04</span>
+        <h3 class="usp-card__title">ESG &amp; sustainability</h3>
+        <p class="usp-card__desc">LEED Gold-oriented masterplan. Ultra-pure water recycling and zero-liquid-discharge protocols.</p>
+      </article>
+      <article class="usp-card">
+        <span class="usp-card__num">05</span>
+        <h3 class="usp-card__title">Infrastructure advantages</h3>
+        <p class="usp-card__desc">Redundant 220 kV power, ultra-pure water plant, specialty gas piping, and dedicated fabrication-grade waste handling.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="master-plan reveal">
+    <div class="master-plan__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">03 — Master plan</p>
+      <h2>Purpose-built for <em>semiconductor fabrication.</em></h2>
+    </div>
+    <figure class="master-plan__figure">
+      <img src="../shared/project-img/sky-garden.jpg" alt="Canh Thuy master plan" />
+      <figcaption class="master-plan__caption">Masterplan currently in provincial review — anchor tenant conversations underway.</figcaption>
+    </figure>
+  </section>
+
+  <section class="specs reveal">
+    <div class="specs__head">
+      <p class="eyebrow" style="margin-bottom:var(--space-4)">04 — Project specifications</p>
+      <h2>The <em>numbers.</em></h2>
+    </div>
+    <dl class="specs__grid">
+      <div class="spec-row"><dt>Total area</dt><dd>280 hectares</dd></div>
+      <div class="spec-row"><dt>Semi &amp; precision zone</dt><dd>190 hectares</dd></div>
+      <div class="spec-row"><dt>R&amp;D + amenity</dt><dd>50 hectares</dd></div>
+      <div class="spec-row"><dt>Green corridors</dt><dd>40 hectares</dd></div>
+      <div class="spec-row"><dt>Target tenants</dt><dd>15–25 anchor + specialty firms</dd></div>
+      <div class="spec-row"><dt>Projected workforce</dt><dd>32,000+ high-skilled employees</dd></div>
+      <div class="spec-row"><dt>Power capacity</dt><dd>Dual 220 kV redundant substations</dd></div>
+      <div class="spec-row"><dt>Water supply</dt><dd>60,000 m³/day + ultra-pure water plant</dd></div>
+      <div class="spec-row"><dt>Wastewater</dt><dd>Zero-liquid-discharge (ZLD) system</dd></div>
+      <div class="spec-row"><dt>Amenities</dt><dd>R&amp;D campus, engineer housing, medical, retail</dd></div>
+    </dl>
+  </section>
+
+  <section class="related-projects reveal">
+    <div class="related-projects__head">
+      <h2>Other <em>ASP Industrial</em> parks.</h2>
+      <a href="portfolio-industrial.html" class="project-list__view-all">View all →</a>
+    </div>
+    <div class="related-grid">
+      <a href="portfolio-quang-yen.html" class="related-card">
+        <span class="related-card__num">01 · Quang Ninh</span>
+        <h3 class="related-card__title">Quang Yen Industrial Park</h3>
+        <div class="related-card__meta"><span>1,192 ha</span><span>Master planning</span></div>
+        <span class="related-card__cta">View project</span>
+      </a>
+      <a href="portfolio-diem-thuy.html" class="related-card">
+        <span class="related-card__num">02 · Thai Nguyen</span>
+        <h3 class="related-card__title">Diem Thuy Industrial Park</h3>
+        <div class="related-card__meta"><span>350 ha</span><span>Operational</span></div>
+        <span class="related-card__cta">View project</span>
+      </a>
+      <a href="portfolio-hiep-cuong.html" class="related-card">
+        <span class="related-card__num">03 · Hung Yen</span>
+        <h3 class="related-card__title">Hiep Cuong Industrial Park</h3>
+        <div class="related-card__meta"><span>410 ha</span><span>Under construction</span></div>
+        <span class="related-card__cta">View project</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-cta reveal">
+    <div class="contact-cta__inner">
+      <div class="contact-cta__copy">
+        <p class="eyebrow" style="margin-bottom:var(--space-4)">Leasing enquiry</p>
+        <h2>Interested in <em>Canh Thuy?</em></h2>
+        <p>Anchor tenant slots are being allocated. Contact our semiconductor cluster team for site briefings.</p>
+        <div style="margin-top: var(--space-6);"><a href="contact.html" class="btn">Request a briefing →</a></div>
+      </div>
+      <dl class="contact-cta__details">
+        <div class="detail-row"><dt>Contact</dt><dd>ASP Land — Bac Ninh</dd></div>
+        <div class="detail-row"><dt>Hotline</dt><dd>+84 (0) 24 XXXX XXXX</dd></div>
+        <div class="detail-row"><dt>Email</dt><dd>canhthuy@aspland.vn</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="../shared/brand-graphic/logo.png" alt="ASP Land" />
+          <p class="tagline">Beyond Real Estate, We Build Enduring Foundations for Sustainable Growth.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Explore</p>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio-industrial.html">Portfolio</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Portfolio</p>
+          <ul>
+            <li><a href="portfolio-industrial.html">Industrial</a></li>
+            <li><a href="portfolio-office.html">Office</a></li>
+            <li><a href="#">Residential (coming soon)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contact</p>
+          <p>Hanoi, Vietnam<br />+84 (0) 24 XXXX XXXX<br />leasing@aspland.vn</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 ASP Land. All Rights Reserved.</span>
+        <span>Design preview — Savills Place</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../shared/js/site.js"></script>
+  <script src="../shared/js/kcn-map.js"></script>
+</body>
+</html>
