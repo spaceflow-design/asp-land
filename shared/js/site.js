@@ -47,6 +47,73 @@
     requestAnimationFrame(() => hero.classList.add('is-loaded'));
   }
 
+  // ----- Count-up animation for stats -----
+  const counters = document.querySelectorAll('.count-up');
+  if (counters.length && 'IntersectionObserver' in window) {
+    const formatNum = (val, target) => {
+      if (target >= 1000) return Math.floor(val).toLocaleString('en-US');
+      return Math.floor(val).toString();
+    };
+    const runCounter = (el) => {
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1600;
+      const start = performance.now();
+      const step = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = formatNum(target * eased, target) + suffix;
+        if (t < 1) requestAnimationFrame(step);
+        else el.textContent = formatNum(target, target) + suffix;
+      };
+      requestAnimationFrame(step);
+    };
+    const co = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runCounter(entry.target);
+            co.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    counters.forEach((el) => co.observe(el));
+  }
+
+  // ----- Map type filter -----
+  const filterChips = document.querySelectorAll('.map-filter__chip');
+  if (filterChips.length) {
+    filterChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const filter = chip.dataset.filter;
+        // Update active state
+        filterChips.forEach((c) => {
+          c.classList.remove('is-active');
+          c.setAttribute('aria-selected', 'false');
+        });
+        chip.classList.add('is-active');
+        chip.setAttribute('aria-selected', 'true');
+
+        // Filter project rows
+        const rows = document.querySelectorAll('.project-row');
+        let visible = 0;
+        rows.forEach((row) => {
+          const type = row.dataset.type;
+          const show = filter === 'all' || type === filter;
+          row.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        const counter = document.getElementById('project-count');
+        if (counter) counter.textContent = `${visible} project${visible === 1 ? '' : 's'}`;
+
+        // Filter map pins (dispatch event picked up by vn-map)
+        document.dispatchEvent(new CustomEvent('map:filter', { detail: { filter } }));
+      });
+    });
+  }
+
   // ----- Smooth anchor scroll -----
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {

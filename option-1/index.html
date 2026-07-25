@@ -64,7 +64,14 @@
           A next-generation developer of industrial ecosystems, purpose-built to attract high-value FDI
           and drive Vietnam's growth into a new era.
         </p>
-        <a href="#statement" class="hero__scroll">Begin</a>
+        <div class="hero__actions">
+          <a href="#featured" class="pill-btn pill-btn--primary">
+            See the portfolio <span class="pill-btn__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#contact" class="pill-btn pill-btn--ghost">
+            Talk to us <span class="pill-btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -92,16 +99,22 @@
         </p>
 
         <div class="statement__stats">
-          <div class="stat">
-            <div class="stat__value">3M+</div>
-            <div class="stat__label">DWT shipping capacity built since 2012</div>
+          <div class="stat stat--dark">
+            <div class="stat__value">
+              <span class="count-up" data-target="2232" data-suffix="">2,232</span>
+            </div>
+            <div class="stat__label">Hectares under development across four industrial parks</div>
+          </div>
+          <div class="stat stat--dark">
+            <div class="stat__value">
+              <span class="count-up" data-target="40" data-suffix="K">40K</span><sup>B</sup>
+            </div>
+            <div class="stat__label">Billion VND infrastructure deployed across ASP ecosystem</div>
           </div>
           <div class="stat">
-            <div class="stat__value">40,000B</div>
-            <div class="stat__label">VND in Quang Ninh mega infrastructure</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">4</div>
+            <div class="stat__value">
+              <span class="count-up" data-target="4" data-suffix="">4</span>
+            </div>
             <div class="stat__label">Industrial parks across Northern Vietnam</div>
           </div>
         </div>
@@ -169,6 +182,21 @@
       </p>
     </div>
 
+    <div class="map-filter" role="tablist" aria-label="Filter projects by type">
+      <button type="button" class="map-filter__chip is-active" data-filter="all" role="tab" aria-selected="true">
+        All <span class="map-filter__count">5</span>
+      </button>
+      <button type="button" class="map-filter__chip" data-filter="industrial" role="tab" aria-selected="false">
+        <span class="map-filter__dot" data-type="industrial"></span> Industrial <span class="map-filter__count">4</span>
+      </button>
+      <button type="button" class="map-filter__chip" data-filter="office" role="tab" aria-selected="false">
+        <span class="map-filter__dot" data-type="office"></span> Office <span class="map-filter__count">1</span>
+      </button>
+      <button type="button" class="map-filter__chip" data-filter="residential" role="tab" aria-selected="false">
+        <span class="map-filter__dot" data-type="residential"></span> Residential <span class="map-filter__count">0</span>
+      </button>
+    </div>
+
     <div class="portfolio-map__body">
       <div class="map-container">
         <div id="vn-map" aria-label="Map of ASP Land projects in Northern Vietnam"></div>
@@ -176,150 +204,124 @@
 
       <div class="project-list">
         <div class="project-list__head">
-          <span class="project-list__count">4 active projects</span>
+          <span class="project-list__count" id="project-count">5 active projects</span>
           <a href="portfolio-industrial.html" class="project-list__view-all">View all →</a>
         </div>
 
-        <div class="project-row" data-project="quang-yen">
+        <div class="project-row" data-project="quang-yen" data-type="industrial">
           <span class="project-row__index">01</span>
           <div>
             <div class="project-row__name">Quang Yen Industrial Park</div>
-            <div class="project-row__loc">Quang Ninh</div>
+            <div class="project-row__loc">Quang Ninh · <em class="row-type">Industrial</em></div>
           </div>
           <div class="project-row__area">1,192<span>hectares</span></div>
         </div>
 
-        <div class="project-row" data-project="diem-thuy">
+        <div class="project-row" data-project="diem-thuy" data-type="industrial">
           <span class="project-row__index">02</span>
           <div>
             <div class="project-row__name">Diem Thuy Industrial Park</div>
-            <div class="project-row__loc">Thai Nguyen</div>
+            <div class="project-row__loc">Thai Nguyen · <em class="row-type">Industrial</em></div>
           </div>
           <div class="project-row__area">350<span>hectares</span></div>
         </div>
 
-        <div class="project-row" data-project="hiep-cuong">
+        <div class="project-row" data-project="hiep-cuong" data-type="industrial">
           <span class="project-row__index">03</span>
           <div>
             <div class="project-row__name">Hiep Cuong Industrial Park</div>
-            <div class="project-row__loc">Hung Yen</div>
+            <div class="project-row__loc">Hung Yen · <em class="row-type">Industrial</em></div>
           </div>
           <div class="project-row__area">410<span>hectares</span></div>
         </div>
 
-        <div class="project-row" data-project="canh-thuy">
+        <div class="project-row" data-project="canh-thuy" data-type="industrial">
           <span class="project-row__index">04</span>
           <div>
             <div class="project-row__name">Canh Thuy Industrial Park</div>
-            <div class="project-row__loc">Bac Ninh</div>
+            <div class="project-row__loc">Bac Ninh · <em class="row-type">Industrial</em></div>
           </div>
           <div class="project-row__area">280<span>hectares</span></div>
+        </div>
+
+        <div class="project-row" data-project="central-hanoi" data-type="office">
+          <span class="project-row__index">05</span>
+          <div>
+            <div class="project-row__name">ASP Central Hanoi Tower</div>
+            <div class="project-row__loc">Hanoi CBD · <em class="row-type">Office</em></div>
+          </div>
+          <div class="project-row__area">60,000<span>sqm GFA</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================ FEATURED PROJECTS ============================================ -->
-  <section class="featured reveal">
+  <section class="featured reveal" id="featured">
     <div class="featured__head">
       <h2>Featured <em style="font-style:normal;font-weight:700;color:var(--color-green-deep)">projects.</em></h2>
       <p>
-        Three flagship developments shaping the future of industrial real estate in Northern Vietnam.
+        Two flagship developments across industrial and commercial — the anchors of the ASP Land portfolio.
       </p>
     </div>
 
-    <div class="featured__list">
+    <div class="featured__grid">
 
-      <a href="portfolio-quang-yen.html" class="feature-card">
-        <div class="feature-card__visual">
-          <img
-            src="../shared/project-img/stock-turbines-sunset.jpg"
-            alt="Quang Yen Industrial Park aerial view" />
+      <a href="portfolio-quang-yen.html" class="feat-card" data-type="industrial">
+        <div class="feat-card__head">
+          <span class="feat-card__num">01</span>
+          <span class="feat-card__tag">Industrial</span>
         </div>
-        <div class="feature-card__body">
-          <span class="feature-card__num">Project 01 · Quang Ninh</span>
-          <h3 class="feature-card__title">Quang Yen Industrial Park</h3>
-          <p style="color:var(--color-text-muted)">
-            A 1,192-hectare flagship anchored by deep-water port connectivity —
-            engineered for semiconductor, electronics, and renewable energy manufacturers.
-          </p>
-          <div class="feature-card__meta">
-            <div class="feature-card__meta-item">
-              <span>Total area</span>
-              <strong>1,192 ha</strong>
-            </div>
-            <div class="feature-card__meta-item">
-              <span>Status</span>
-              <strong>Master planning</strong>
-            </div>
-            <div class="feature-card__meta-item">
-              <span>Target</span>
-              <strong>Semiconductor · EV</strong>
-            </div>
+        <h3 class="feat-card__title">Quang Yen<br />Industrial Park</h3>
+        <p class="feat-card__loc">Quang Ninh · Master planning</p>
+
+        <div class="feat-card__visual">
+          <div class="feat-card__scroll">
+            <img src="../shared/project-img/stock-turbines-sunset.jpg" alt="" />
+            <img src="../shared/project-img/stock-aerial-solar-field.jpg" alt="" />
+            <img src="../shared/project-img/stock-turbines-field-mountains.jpg" alt="" />
+            <img src="../shared/project-img/stock-aerial-turbines.jpg" alt="" />
           </div>
-          <span class="feature-card__cta">View project</span>
+        </div>
+
+        <div class="feat-card__foot">
+          <ul class="feat-card__meta">
+            <li><span>Area</span><strong>1,192 ha</strong></li>
+            <li><span>Target</span><strong>Semi · EV</strong></li>
+            <li><span>Workforce</span><strong>85,000+</strong></li>
+          </ul>
+          <span class="feat-card__cta">
+            View project <span class="feat-card__cta-arrow" aria-hidden="true">↗</span>
+          </span>
         </div>
       </a>
 
-      <a href="portfolio-diem-thuy.html" class="feature-card">
-        <div class="feature-card__visual">
-          <img
-            src="../shared/project-img/stock-turbines-sunset.jpg"
-            alt="Diem Thuy Industrial Park" />
+      <a href="portfolio-office.html" class="feat-card" data-type="office">
+        <div class="feat-card__head">
+          <span class="feat-card__num">02</span>
+          <span class="feat-card__tag">Office</span>
         </div>
-        <div class="feature-card__body">
-          <span class="feature-card__num">Project 02 · Thai Nguyen</span>
-          <h3 class="feature-card__title">Diem Thuy Industrial Park</h3>
-          <p style="color:var(--color-text-muted)">
-            350 hectares in Vietnam's electronics manufacturing capital, hosting global FDI tenants
-            with integrated worker housing and logistics infrastructure.
-          </p>
-          <div class="feature-card__meta">
-            <div class="feature-card__meta-item">
-              <span>Total area</span>
-              <strong>350 ha</strong>
-            </div>
-            <div class="feature-card__meta-item">
-              <span>Status</span>
-              <strong>Operational</strong>
-            </div>
-            <div class="feature-card__meta-item">
-              <span>Target</span>
-              <strong>Electronics · Tech</strong>
-            </div>
-          </div>
-          <span class="feature-card__cta">View project</span>
-        </div>
-      </a>
+        <h3 class="feat-card__title">ASP Central<br />Hanoi Tower</h3>
+        <p class="feat-card__loc">Hanoi CBD · LEED Gold-oriented</p>
 
-      <a href="portfolio-hiep-cuong.html" class="feature-card">
-        <div class="feature-card__visual">
-          <img
-            src="../shared/project-img/stock-aerial-turbines.jpg"
-            alt="Hiep Cuong Industrial Park" />
-        </div>
-        <div class="feature-card__body">
-          <span class="feature-card__num">Project 03 · Hung Yen</span>
-          <h3 class="feature-card__title">Hiep Cuong Industrial Park</h3>
-          <p style="color:var(--color-text-muted)">
-            A 410-hectare integrated industrial-urban development positioned along the
-            Hanoi–Hai Phong expressway, targeting logistics and light manufacturing tenants.
-          </p>
-          <div class="feature-card__meta">
-            <div class="feature-card__meta-item">
-              <span>Total area</span>
-              <strong>410 ha</strong>
-            </div>
-            <div class="feature-card__meta-item">
-              <span>Status</span>
-              <strong>Under construction</strong>
-            </div>
-            <div class="feature-card__meta-item">
-              <span>Target</span>
-              <strong>Logistics · Light mfg.</strong>
-            </div>
+        <div class="feat-card__visual">
+          <div class="feat-card__scroll">
+            <img src="../shared/project-img/stock-turbines-silhouette.jpg" alt="" />
+            <img src="../shared/project-img/stock-solar-city-sunset.jpg" alt="" />
+            <img src="../shared/project-img/stock-worker-solar.jpg" alt="" />
+            <img src="../shared/project-img/stock-renewable-landscape.jpg" alt="" />
           </div>
-          <span class="feature-card__cta">View project</span>
+        </div>
+
+        <div class="feat-card__foot">
+          <ul class="feat-card__meta">
+            <li><span>GFA</span><strong>60,000 sqm</strong></li>
+            <li><span>Floors</span><strong>45</strong></li>
+            <li><span>Cert.</span><strong>LEED Gold</strong></li>
+          </ul>
+          <span class="feat-card__cta">
+            View project <span class="feat-card__cta-arrow" aria-hidden="true">↗</span>
+          </span>
         </div>
       </a>
 
@@ -372,52 +374,60 @@
     </div>
   </section>
 
-  <!-- ============================================ CONTACT CTA ============================================ -->
-  <section class="contact-cta reveal" id="contact">
-    <div class="contact-cta__inner">
-      <div class="contact-cta__copy">
-        <p class="eyebrow" style="margin-bottom:var(--space-4)">04 — Begin a conversation</p>
-        <h2>Partner with a <em>steward developer.</em></h2>
-        <p>
-          Whether you're scouting an FDI site, exploring office space in Hanoi CBD,
-          or evaluating Vietnam as a long-term operating base — let's talk.
+  <!-- ============================================ CONTACT CTA (opt-3 dark hero style) ============================================ -->
+  <section class="contact-cta contact-cta--dark reveal" id="contact">
+    <div class="contact-cta__hero">
+      <span class="eyebrow contact-cta__eyebrow">04 — Get in touch</span>
+      <h2 class="contact-cta__title">
+        Let's <em>build</em> something enduring.
+      </h2>
+      <div class="contact-cta__row">
+        <p class="contact-cta__lead">
+          Scouting an FDI site, exploring a strategic partnership, or just curious what
+          integrated industrial development looks like in 2026? Reach us directly.
         </p>
-
-        <dl class="contact-cta__details">
-          <div class="detail-row">
-            <dt>Address</dt>
-            <dd>Hanoi, Vietnam</dd>
-          </div>
-          <div class="detail-row">
-            <dt>Hotline</dt>
-            <dd>+84 (0) 24 XXXX XXXX</dd>
-          </div>
-          <div class="detail-row">
-            <dt>Email</dt>
-            <dd>leasing@aspland.vn</dd>
-          </div>
-        </dl>
+        <a href="#contact-form" class="pill-btn pill-btn--primary pill-btn--lg">
+          Start a conversation <span class="pill-btn__arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
+      <dl class="contact-cta__grid">
+        <div><dt>Head Office</dt><dd>Hanoi, Vietnam</dd></div>
+        <div><dt>Leasing</dt><dd>leasing@aspland.vn</dd></div>
+        <div><dt>Investor Relations</dt><dd>ir@aspland.vn</dd></div>
+      </dl>
+    </div>
 
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — this is a demo form.');">
-        <div class="field">
-          <label for="cf-name">Name</label>
-          <input id="cf-name" name="name" type="text" required placeholder="Your full name" />
+    <div class="contact-cta__form-wrap" id="contact-form">
+      <div class="contact-cta__form-inner">
+        <div class="contact-cta__form-side">
+          <p class="eyebrow" style="color: var(--color-green-deep); margin-bottom: var(--space-3);">Quick enquiry</p>
+          <h3>Tell us about your <em>project.</em></h3>
+          <p>A dedicated consultant will follow up within one business day.</p>
+          <dl class="contact-cta__mini-details">
+            <div class="detail-row"><dt>Hotline</dt><dd>+84 (0) 24 XXXX XXXX</dd></div>
+            <div class="detail-row"><dt>Email</dt><dd>leasing@aspland.vn</dd></div>
+          </dl>
         </div>
-        <div class="field">
-          <label for="cf-phone">Phone</label>
-          <input id="cf-phone" name="phone" type="tel" placeholder="+84 ..." />
-        </div>
-        <div class="field">
-          <label for="cf-email">Email</label>
-          <input id="cf-email" name="email" type="email" required placeholder="you@company.com" />
-        </div>
-        <div class="field">
-          <label for="cf-msg">Message *</label>
-          <textarea id="cf-msg" name="message" required placeholder="Tell us about your project, FDI focus, or site requirements..."></textarea>
-        </div>
-        <button type="submit" class="btn">Submit inquiry</button>
-      </form>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — this is a demo form.');">
+          <div class="field">
+            <label for="cf-name">Name *</label>
+            <input id="cf-name" name="name" type="text" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" name="phone" type="tel" placeholder="+84 ..." />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email *</label>
+            <input id="cf-email" name="email" type="email" required placeholder="you@company.com" />
+          </div>
+          <div class="field">
+            <label for="cf-msg">Message *</label>
+            <textarea id="cf-msg" name="message" required placeholder="Tell us about your project, FDI focus, or site requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn">Submit enquiry</button>
+        </form>
+      </div>
     </div>
   </section>
 

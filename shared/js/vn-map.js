@@ -8,10 +8,11 @@
   const mapEl = document.getElementById('vn-map');
   if (!mapEl || typeof L === 'undefined') return;
 
-  // 4 KCN project locations (approximate coordinates)
+  // Project locations (approximate coordinates) — industrial + office
   const PROJECTS = [
     {
       id: 'quang-yen',
+      type: 'industrial',
       name: 'Quang Yen Industrial Park',
       province: 'Quang Ninh',
       area: '1,192 ha',
@@ -21,6 +22,7 @@
     },
     {
       id: 'diem-thuy',
+      type: 'industrial',
       name: 'Diem Thuy Industrial Park',
       province: 'Thai Nguyen',
       area: '350 ha',
@@ -30,6 +32,7 @@
     },
     {
       id: 'hiep-cuong',
+      type: 'industrial',
       name: 'Hiep Cuong Industrial Park',
       province: 'Hung Yen',
       area: '410 ha',
@@ -39,12 +42,23 @@
     },
     {
       id: 'canh-thuy',
+      type: 'industrial',
       name: 'Canh Thuy Industrial Park',
       province: 'Bac Ninh',
       area: '280 ha',
       status: 'Master planning',
       lat: 21.218,
       lng: 106.197,
+    },
+    {
+      id: 'central-hanoi',
+      type: 'office',
+      name: 'ASP Central Hanoi Tower',
+      province: 'Hanoi CBD',
+      area: '60,000 sqm GFA',
+      status: 'Pre-leasing',
+      lat: 21.028,
+      lng: 105.804,
     },
   ];
 
@@ -78,10 +92,12 @@
     }
   ).addTo(map);
 
-  PROJECTS.forEach((p, i) => {
+  const markers = [];
+
+  PROJECTS.forEach((p) => {
     const pin = L.divIcon({
       className: 'asp-pin-wrapper',
-      html: `<div class="asp-pin" data-project="${p.id}" title="${p.name}"></div>`,
+      html: `<div class="asp-pin" data-project="${p.id}" data-type="${p.type}" title="${p.name}"></div>`,
       iconSize: [24, 24],
       iconAnchor: [12, 12],
     });
@@ -96,11 +112,14 @@
     marker.on('mouseover', function () {
       this.openPopup();
     });
+
+    markers.push({ marker, project: p });
   });
 
-  // Sync hover state with project list rows
-  document.querySelectorAll('.project-row').forEach((row, i) => {
-    const project = PROJECTS[i];
+  // Sync hover state with project list rows (looks up project by data-project attr)
+  document.querySelectorAll('.project-row').forEach((row) => {
+    const id = row.dataset.project;
+    const project = PROJECTS.find((p) => p.id === id);
     if (!project) return;
     row.addEventListener('mouseenter', () => {
       map.setView([project.lat, project.lng], 8, { animate: true });
@@ -110,5 +129,15 @@
   // Reset on map mouseleave
   mapEl.addEventListener('mouseleave', () => {
     map.setView([21.0, 106.0], 7, { animate: true });
+  });
+
+  // Filter markers on type-filter events from site.js
+  document.addEventListener('map:filter', (e) => {
+    const filter = e.detail.filter;
+    markers.forEach(({ marker, project }) => {
+      const show = filter === 'all' || project.type === filter;
+      if (show) marker.addTo(map);
+      else map.removeLayer(marker);
+    });
   });
 })();

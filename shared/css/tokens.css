@@ -9,6 +9,12 @@
   --color-green-fresh:  #299747;  /* Primary action — buttons, links */
   --color-green-deep:   #006A3F;  /* Heading emphasis, anchored sections */
   --color-green-forest: #2C5E32;  /* Dark sections, footer */
+  --color-green-lime:   #B8E14A;  /* Softer opt-3 pill accent (less harsh than pure lime) */
+  --color-green-mist:   #EAF3D8;  /* Very light green — subtle gradient sections */
+
+  /* ---------- Section-tint gradients (subtle opt-3 mix) ---------- */
+  --gradient-mist:  linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-green-mist) 100%);
+  --gradient-dark:  radial-gradient(circle at 20% 20%, #0f3d1c 0%, #061b0d 60%, #030d05 100%);
 
   /* ---------- Neutrals ---------- */
   --color-ink:        #1A1A1A;
