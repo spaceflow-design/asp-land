@@ -53,7 +53,7 @@
     {
       id: 'central-hanoi',
       type: 'office',
-      name: 'ASP Central Hanoi Tower',
+      name: 'ASP Giảng Võ Complex',
       province: 'Hanoi CBD',
       area: '60,000 sqm GFA',
       status: 'Pre-leasing',
