@@ -393,7 +393,7 @@ body {
    Section: Statement (About teaser)
    ============================================ */
 .statement {
-  padding: var(--space-11) var(--container-pad);
+  padding: var(--space-9) var(--container-pad);
   max-width: var(--container-max);
   margin-inline: auto;
 }
@@ -507,7 +507,7 @@ body {
    ============================================ */
 .capabilities {
   background: var(--color-white);
-  padding-block: var(--space-11);
+  padding-block: var(--space-9);
 }
 
 .capabilities__intro {
@@ -867,7 +867,7 @@ body {
    ============================================ */
 .featured {
   background: var(--color-white);
-  padding-block: var(--space-11);
+  padding-block: var(--space-9);
 }
 
 .featured__head {
@@ -1006,7 +1006,7 @@ body {
 .milestones {
   background: var(--color-white);
   color: var(--color-ink);
-  padding-block: var(--space-11);
+  padding-block: var(--space-9);
   overflow: hidden;
 }
 
@@ -1105,7 +1105,7 @@ body {
    ============================================ */
 .contact-cta {
   background: var(--color-bg-soft);
-  padding-block: var(--space-11);
+  padding-block: var(--space-9);
 }
 
 .contact-cta__inner {
@@ -1609,7 +1609,7 @@ body {
    ============================================ */
 .contact-cta--dark {
   background: var(--color-bg-soft);
-  padding-block: var(--space-11) var(--space-9);
+  padding-block: var(--space-9) var(--space-9);
 }
 .contact-cta__hero {
   max-width: var(--container-max);
