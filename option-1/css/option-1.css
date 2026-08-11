@@ -1608,6 +1608,56 @@ body {
 .milestones.is-visible .timeline-step:nth-child(4) { transition-delay: 1.3s; }
 
 /* ============================================
+   Leadership Quote section
+   ============================================ */
+.leadership-quote {
+  background: var(--color-green-forest);
+  color: var(--color-white);
+  padding-block: var(--space-9);
+}
+.leadership-quote__inner {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  position: relative;
+}
+.leadership-quote__mark {
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1;
+  color: var(--color-green-bright);
+  font-family: 'Georgia', serif;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+.leadership-quote__body {
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-6);
+  max-width: 28ch;
+}
+.leadership-quote__attribution {
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  gap: var(--space-4);
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.leadership-quote__name {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--color-white);
+}
+.leadership-quote__role {
+  font-size: var(--fs-micro);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-green-bright);
+}
+
+/* ============================================
    Partners / Certifications section (light green bg)
    ============================================ */
 .partners {
@@ -2777,6 +2827,43 @@ body {
 .consultant-card__contact strong {
   color: var(--color-ink);
   font-weight: 500;
+}
+.consultant-card__badges {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+.channel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  color: var(--color-white);
+  transition: transform var(--duration-fast) var(--ease-out),
+              filter var(--duration-fast) var(--ease-out);
+}
+.channel-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+}
+.channel-badge:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+.channel-badge--zalo {
+  background: #0068FF;
+}
+.channel-badge--whatsapp {
+  background: #25D366;
 }
 
 /* ============================================
