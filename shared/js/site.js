@@ -106,7 +106,11 @@
           if (show) visible++;
         });
         const counter = document.getElementById('project-count');
-        if (counter) counter.textContent = `${visible} project${visible === 1 ? '' : 's'}`;
+        if (counter) {
+          counter.textContent = filter === 'all'
+            ? 'Our Developments'
+            : `${visible} ${filter} project${visible === 1 ? '' : 's'}`;
+        }
 
         // Filter map pins (dispatch event picked up by vn-map)
         document.dispatchEvent(new CustomEvent('map:filter', { detail: { filter } }));
