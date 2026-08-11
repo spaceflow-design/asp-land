@@ -2244,9 +2244,9 @@ body {
   padding-inline: var(--container-pad);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--color-border);
-  border-block: 1px solid var(--color-border);
+  gap: var(--space-5);
+  background: transparent;
+  border: none;
 }
 @media (max-width: 1100px) {
   .values__grid { grid-template-columns: repeat(2, 1fr); }
