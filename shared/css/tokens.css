@@ -36,8 +36,8 @@
   --color-bg-dark:        var(--color-green-forest);
 
   /* ---------- Type ---------- */
-  --font-display: 'SVN-Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body:    'SVN-Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Editorial type scale */
   --fs-hero:   clamp(3rem, 7vw, 6rem);     /* 48 → 96px */

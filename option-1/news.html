@@ -56,6 +56,15 @@
       <p class="eyebrow" style="margin-bottom:var(--space-4)">01 — Market Updates</p>
       <h2>Market <em>intelligence.</em></h2>
     </div>
+
+    <div class="news-filter" role="tablist" aria-label="Filter news by date">
+      <button type="button" class="news-filter__chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button type="button" class="news-filter__chip" data-filter="today" role="tab" aria-selected="false">Today</button>
+      <button type="button" class="news-filter__chip" data-filter="week" role="tab" aria-selected="false">This week</button>
+      <button type="button" class="news-filter__chip" data-filter="month" role="tab" aria-selected="false">This month</button>
+      <button type="button" class="news-filter__chip" data-filter="year" role="tab" aria-selected="false">This year</button>
+    </div>
+
     <div class="news-grid">
       <a href="#" class="news-card">
         <div class="news-card__visual"><img src="../shared/project-img/stock-aerial-solar-field.jpg" alt="" /></div>
@@ -134,18 +143,23 @@
     </div>
   </section>
 
-  <section class="contact-cta reveal">
-    <div class="contact-cta__inner">
-      <div class="contact-cta__copy">
-        <p class="eyebrow" style="margin-bottom:var(--space-4)">Stay informed</p>
-        <h2>Subscribe to <em>ASP Insights.</em></h2>
-        <p>Quarterly briefings on Vietnam industrial FDI, portfolio updates, and event invitations — delivered directly to institutional inboxes.</p>
-        <div style="margin-top: var(--space-6);"><a href="contact.html" class="btn">Contact us →</a></div>
+  <section class="contact-cta contact-cta--dark" id="contact">
+    <div class="contact-cta__hero">
+      <span class="eyebrow contact-cta__eyebrow">— Stay informed</span>
+      <h2 class="contact-cta__title">Let's <em>build</em> something enduring.</h2>
+      <div class="contact-cta__row">
+        <p class="contact-cta__lead">
+          Quarterly briefings on Vietnam industrial FDI, portfolio updates, and event
+          invitations — delivered directly to institutional inboxes.
+        </p>
+        <a href="contact.html" class="pill-btn pill-btn--primary pill-btn--lg">
+          Subscribe to insights <span class="pill-btn__arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
-      <dl class="contact-cta__details">
-        <div class="detail-row"><dt>Press</dt><dd>press@aspland.vn</dd></div>
-        <div class="detail-row"><dt>Investor relations</dt><dd>ir@aspland.vn</dd></div>
-        <div class="detail-row"><dt>General</dt><dd>hello@aspland.vn</dd></div>
+      <dl class="contact-cta__grid">
+        <div><dt>Press</dt><dd>press@aspland.vn</dd></div>
+        <div><dt>Investor Relations</dt><dd>ir@aspland.vn</dd></div>
+        <div><dt>General</dt><dd>hello@aspland.vn</dd></div>
       </dl>
     </div>
   </section>
