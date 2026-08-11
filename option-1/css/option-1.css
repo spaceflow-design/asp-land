@@ -471,35 +471,23 @@ body {
   max-width: 22ch;
 }
 
-/* Dark stat card variant (opt-3 accent) */
+/* Bright green stat card (matches Figma solid fill, no gradient) */
 .stat--dark {
-  background: linear-gradient(140deg, #0f3d1c 0%, #06210f 100%);
+  background: var(--color-green-fresh);
   color: var(--color-white);
   padding: var(--space-6) var(--space-6);
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
 }
-.stat--dark::before {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: calc(var(--radius-lg) - 1px);
-  background: linear-gradient(140deg, rgba(184,225,74,0.05) 0%, transparent 60%);
-  pointer-events: none;
-}
 .stat--dark .stat__value {
   color: var(--color-green-lime);
   font-size: clamp(2.5rem, 4.5vw, 3.5rem);
-  position: relative;
-  z-index: 1;
 }
 .stat--dark .stat__label {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.85);
   max-width: none;
   margin-top: var(--space-4);
-  position: relative;
-  z-index: 1;
 }
 
 /* ============================================
@@ -1363,8 +1351,8 @@ body {
   transform: translateY(-1px);
 }
 .map-filter__chip.is-active {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
+  background: var(--color-green-fresh);
+  border-color: var(--color-green-fresh);
   color: var(--color-white);
 }
 .map-filter__count {
@@ -1377,8 +1365,8 @@ body {
   letter-spacing: 0;
 }
 .map-filter__chip.is-active .map-filter__count {
-  background: rgba(255,255,255,0.15);
-  color: var(--color-green-lime);
+  background: rgba(255,255,255,0.2);
+  color: var(--color-white);
 }
 .map-filter__dot {
   display: inline-block;
@@ -1758,7 +1746,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 180px;
-  background: linear-gradient(135deg, #FFF8F0 0%, #FFEEDD 100%);
+  background: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--space-6);
 }
@@ -1768,22 +1756,23 @@ body {
   line-height: var(--lh-base);
 }
 
-/* Vingroup logo mock */
+/* Vingroup logo mock (horizontal: V mark + wordmark) */
 .partner-logo--vingroup {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 .partner-logo--vingroup .partner-logo__mark {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #E63946 0%, #B7202B 100%);
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: #E60000;
   color: var(--color-white);
   font-family: var(--font-display);
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 800;
+  font-style: italic;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1792,9 +1781,9 @@ body {
 .partner-logo--vingroup .partner-logo__wordmark {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 22px;
-  color: #B7202B;
-  letter-spacing: 0.12em;
+  font-size: 28px;
+  color: #E60000;
+  letter-spacing: 0.02em;
 }
 
 /* Golden Dragon badge mock */
@@ -1894,22 +1883,11 @@ body {
    ============================================ */
 .contact-cta--dark {
   padding: 0;
-  background:
-    radial-gradient(circle at 20% 20%, #0f3d1c 0%, #061b0d 60%, #030d05 100%);
+  background: var(--color-green-forest);
   color: var(--color-white);
   position: relative;
   overflow: hidden;
   isolation: isolate;
-}
-.contact-cta--dark::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 85% 15%, rgba(184,225,74,0.15), transparent 45%),
-    radial-gradient(ellipse at 10% 90%, rgba(150,192,62,0.10), transparent 40%);
-  z-index: -1;
-  pointer-events: none;
 }
 .contact-cta__hero {
   max-width: var(--container-max);
