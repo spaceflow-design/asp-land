@@ -2086,6 +2086,43 @@ body {
 }
 
 /* ============================================
+   Breadcrumb (top of interior page-hero)
+   ============================================ */
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-5);
+}
+.breadcrumb__item {
+  color: var(--color-white);
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+.breadcrumb__item[aria-current="page"] {
+  color: var(--color-white);
+  cursor: default;
+  pointer-events: none;
+}
+.breadcrumb a.breadcrumb__item {
+  opacity: 0.85;
+}
+.breadcrumb a.breadcrumb__item:hover {
+  opacity: 1;
+}
+.breadcrumb__sep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-small);
+  color: rgba(255,255,255,0.7);
+  font-weight: 700;
+}
+
+/* ============================================
    Interior page hero (smaller than homepage)
    ============================================ */
 .page-hero {
