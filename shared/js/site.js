@@ -82,6 +82,32 @@
     counters.forEach((el) => co.observe(el));
   }
 
+  // ----- Partners carousel -----
+  const partnersTrack = document.querySelector('[data-partners-track]');
+  if (partnersTrack) {
+    const slides = partnersTrack.querySelectorAll('.partners__slide');
+    const dots = document.querySelectorAll('[data-partners-dots] .partners__dot');
+    const prevBtn = document.querySelector('[data-partners-prev]');
+    const nextBtn = document.querySelector('[data-partners-next]');
+    const total = slides.length;
+    let index = 0;
+
+    const goTo = (i) => {
+      index = (i + total) % total;
+      partnersTrack.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+    };
+
+    prevBtn?.addEventListener('click', () => goTo(index - 1));
+    nextBtn?.addEventListener('click', () => goTo(index + 1));
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const i = parseInt(dot.dataset.index, 10);
+        if (!Number.isNaN(i)) goTo(i);
+      });
+    });
+  }
+
   // ----- Map type filter -----
   const filterChips = document.querySelectorAll('.map-filter__chip');
   if (filterChips.length) {
