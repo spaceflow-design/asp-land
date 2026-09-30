@@ -2028,6 +2028,310 @@ body {
 }
 
 /* ============================================
+   Contact form v2 — larger labels + required indicator
+   ============================================ */
+.contact-form--v2 .field label {
+  font-size: var(--fs-body);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--color-ink);
+  font-weight: 500;
+}
+.field__req {
+  color: #DC2626;
+  margin-left: 4px;
+  font-weight: 700;
+}
+.contact-form--v2 .field input,
+.contact-form--v2 .field textarea {
+  font-size: var(--fs-body);
+  padding: var(--space-3) 0;
+}
+
+/* Multi-select dropdown for Interested Projects */
+.multi-select {
+  position: relative;
+  width: 100%;
+}
+.multi-select__toggle {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  transition: border-color var(--duration-fast) var(--ease-out);
+  font-family: inherit;
+}
+.multi-select__toggle:hover,
+.multi-select__toggle[aria-expanded="true"] {
+  border-color: var(--color-green-fresh);
+}
+.multi-select__placeholder {
+  color: var(--color-text-muted);
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+.multi-select__placeholder.has-value {
+  color: var(--color-ink);
+}
+.multi-select__caret {
+  color: var(--color-gray-500);
+  font-size: 10px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+.multi-select__toggle[aria-expanded="true"] .multi-select__caret {
+  transform: rotate(180deg);
+}
+.multi-select__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  max-height: 260px;
+  overflow-y: auto;
+  padding: var(--space-2);
+}
+.multi-select__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  font-size: var(--fs-small);
+  color: var(--color-ink);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+.multi-select__option:hover {
+  background: var(--color-bg-soft);
+}
+.multi-select__option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-green-fresh);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.multi-select__option--all {
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-3);
+  font-weight: 500;
+  color: var(--color-green-deep);
+}
+
+/* ============================================
+   Project Timeline (KCN detail — horizontal timeline)
+   ============================================ */
+.project-timeline {
+  background: var(--color-bg-soft);
+  padding-block: var(--space-9);
+}
+.project-timeline__head {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  margin-bottom: var(--space-7);
+}
+.project-timeline__head h2 {
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+.project-timeline__head h2 em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+.project-timeline__grid {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  position: relative;
+}
+@media (max-width: 800px) {
+  .project-timeline__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .project-timeline__grid { grid-template-columns: 1fr; }
+}
+.project-timeline__grid::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: calc(var(--container-pad) + 8px);
+  right: calc(var(--container-pad) + 8px);
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+@media (max-width: 800px) { .project-timeline__grid::before { display: none; } }
+.project-timeline__step {
+  position: relative;
+  padding-top: var(--space-6);
+  z-index: 1;
+}
+.project-timeline__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-green-fresh);
+  border: 3px solid var(--color-bg-soft);
+  box-shadow: 0 0 0 1px var(--color-green-fresh);
+}
+.project-timeline__year {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--color-green-deep);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-2);
+}
+.project-timeline__title {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  line-height: var(--lh-base);
+}
+
+/* ============================================
+   Coming Soon page (Residential / Urban placeholders)
+   ============================================ */
+.coming-soon {
+  min-height: 100vh;
+  padding: var(--space-11) var(--container-pad) var(--space-9);
+  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-white) 55%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.coming-soon__inner {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+.coming-soon__crumb {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-7);
+  justify-content: center;
+}
+.coming-soon__crumb .breadcrumb__item,
+.coming-soon__crumb .breadcrumb a.breadcrumb__item {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+.coming-soon__crumb a.breadcrumb__item:hover {
+  color: var(--color-ink);
+}
+.coming-soon__crumb .breadcrumb__item[aria-current="page"] {
+  color: var(--color-ink);
+}
+.coming-soon__crumb .breadcrumb__sep {
+  color: var(--color-gray-500);
+}
+.coming-soon__icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--color-green-fresh);
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+  box-shadow: 0 10px 30px rgba(41,151,71,0.25);
+}
+.coming-soon__eyebrow {
+  color: var(--color-green-deep);
+  margin-bottom: var(--space-4);
+}
+.coming-soon__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin: 0 auto var(--space-5);
+  max-width: 18ch;
+}
+.coming-soon__title em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+.coming-soon__body {
+  font-size: var(--fs-lead);
+  color: var(--color-text-muted);
+  line-height: var(--lh-base);
+  max-width: 60ch;
+  margin: 0 auto var(--space-7);
+}
+.coming-soon__actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-10);
+}
+.coming-soon__pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  text-align: left;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+@media (max-width: 800px) { .coming-soon__pillars { grid-template-columns: 1fr; } }
+.coming-soon__pillar {
+  padding: var(--space-5);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+.coming-soon__pillar-num {
+  font-size: var(--fs-micro);
+  letter-spacing: var(--tracking-x-wide);
+  color: var(--color-green-deep);
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--space-3);
+}
+.coming-soon__pillar h3 {
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  color: var(--color-ink);
+  margin: 0 0 var(--space-3);
+  line-height: var(--lh-snug);
+}
+.coming-soon__pillar p {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  line-height: var(--lh-base);
+  margin: 0;
+}
+
+/* ============================================
    Homepage News section (3 latest articles)
    ============================================ */
 .home-news {

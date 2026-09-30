@@ -82,6 +82,68 @@
     counters.forEach((el) => co.observe(el));
   }
 
+  // ----- Multi-select dropdown (Contact form Interested Projects) -----
+  document.querySelectorAll('[data-multi-select]').forEach((wrap) => {
+    const toggle = wrap.querySelector('[data-multi-toggle]');
+    const menu = wrap.querySelector('.multi-select__menu');
+    const placeholder = wrap.querySelector('[data-multi-placeholder]');
+    const hiddenInput = wrap.querySelector('[data-multi-value]');
+    const allCheckbox = wrap.querySelector('[data-multi-all]');
+    const optionCheckboxes = wrap.querySelectorAll('[data-multi-option]');
+    const defaultPlaceholder = placeholder.textContent;
+
+    const updateSummary = () => {
+      if (allCheckbox.checked) {
+        placeholder.textContent = 'Interested in all projects';
+        placeholder.classList.add('has-value');
+        hiddenInput.value = 'all';
+        return;
+      }
+      const selected = Array.from(optionCheckboxes).filter((c) => c.checked).map((c) => c.value);
+      if (selected.length === 0) {
+        placeholder.textContent = defaultPlaceholder;
+        placeholder.classList.remove('has-value');
+        hiddenInput.value = '';
+      } else if (selected.length === 1) {
+        placeholder.textContent = selected[0];
+        placeholder.classList.add('has-value');
+        hiddenInput.value = selected[0];
+      } else {
+        placeholder.textContent = `${selected.length} projects selected`;
+        placeholder.classList.add('has-value');
+        hiddenInput.value = selected.join(', ');
+      }
+    };
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isOpen);
+      menu.hidden = isOpen;
+    });
+
+    allCheckbox.addEventListener('change', () => {
+      if (allCheckbox.checked) {
+        optionCheckboxes.forEach((c) => (c.checked = false));
+      }
+      updateSummary();
+    });
+
+    optionCheckboxes.forEach((c) => {
+      c.addEventListener('change', () => {
+        if (c.checked) allCheckbox.checked = false;
+        updateSummary();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+      }
+    });
+  });
+
   // ----- Partners carousel -----
   const partnersTrack = document.querySelector('[data-partners-track]');
   if (partnersTrack) {

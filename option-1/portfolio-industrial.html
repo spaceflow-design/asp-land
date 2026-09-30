@@ -79,27 +79,46 @@
     </div>
   </section>
 
-  <!-- QUICK STATS -->
-  <div class="stats-bar reveal">
-    <div class="stats-bar__inner">
-      <div class="stats-bar__item">
-        <span class="stats-bar__label">Industrial parks</span>
-        <span class="stats-bar__value is-green">4</span>
+  <!-- QUICK STATS (centered 5-icon layout, matches homepage) -->
+  <section class="statement statement--centered reveal">
+    <div class="statement__stats statement__stats--icons">
+      <div class="icon-stat">
+        <div class="icon-stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l7-4 7 4v12"/><path d="M9 21V13h6v8"/><path d="M17 9v12"/></svg>
+        </div>
+        <div class="icon-stat__value"><span class="count-up" data-target="6" data-suffix="+">6+</span></div>
+        <div class="icon-stat__label">Industrial parks</div>
       </div>
-      <div class="stats-bar__item">
-        <span class="stats-bar__label">Total land under development</span>
-        <span class="stats-bar__value">2,232 ha</span>
+      <div class="icon-stat">
+        <div class="icon-stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M4 20V10l6-4v14"/><path d="M10 20V13l6-3v10"/><path d="M16 20v-6l4-1v7"/></svg>
+        </div>
+        <div class="icon-stat__value"><span class="count-up" data-target="2771" data-suffix="">2,771</span></div>
+        <div class="icon-stat__label">Hectares under development</div>
       </div>
-      <div class="stats-bar__item">
-        <span class="stats-bar__label">Provinces served</span>
-        <span class="stats-bar__value">4</span>
+      <div class="icon-stat">
+        <div class="icon-stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7 8 7 14 12 22"/><path d="M12 2c5 6 5 12 0 20"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <div class="icon-stat__value"><span class="count-up" data-target="5" data-suffix="+">5+</span></div>
+        <div class="icon-stat__label">Provinces served</div>
       </div>
-      <div class="stats-bar__item">
-        <span class="stats-bar__label">Target FDI markets</span>
-        <span class="stats-bar__value">6+</span>
+      <div class="icon-stat">
+        <div class="icon-stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2"/><path d="M15 20c0-2 2-4 4-4s2 1 2 2"/></svg>
+        </div>
+        <div class="icon-stat__value"><span class="count-up" data-target="200000" data-suffix="+">200,000+</span></div>
+        <div class="icon-stat__label">Projected workforce</div>
+      </div>
+      <div class="icon-stat">
+        <div class="icon-stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <div class="icon-stat__value"><span class="count-up" data-target="6" data-suffix="+">6+</span></div>
+        <div class="icon-stat__label">Target FDI markets</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- MAP + PROJECT LIST -->
   <section class="portfolio-map reveal">
@@ -116,43 +135,60 @@
         <div id="vn-map" aria-label="ASP Land projects across Northern Vietnam"></div>
       </div>
 
-      <div class="project-list">
+      <div class="project-list project-list--scroll">
         <div class="project-list__head">
           <span class="project-list__count">Our Developments</span>
-          <a href="#projects" class="project-list__view-all">Jump to details →</a>
         </div>
-        <a href="portfolio-quang-yen.html" class="project-row" data-project="quang-yen" style="text-decoration:none;color:inherit;">
-          <span class="project-row__index">01</span>
-          <div>
-            <div class="project-row__name">ASP Quang Yen Industrial Park</div>
-            <div class="project-row__loc">Quang Ninh</div>
-          </div>
-          <div class="project-row__area">1,192<span>hectares</span></div>
-        </a>
-        <a href="portfolio-diem-thuy.html" class="project-row" data-project="diem-thuy" style="text-decoration:none;color:inherit;">
-          <span class="project-row__index">02</span>
-          <div>
-            <div class="project-row__name">ASP Diem Thuy Industrial Park</div>
-            <div class="project-row__loc">Thai Nguyen</div>
-          </div>
-          <div class="project-row__area">350<span>hectares</span></div>
-        </a>
-        <a href="portfolio-hiep-cuong.html" class="project-row" data-project="hiep-cuong" style="text-decoration:none;color:inherit;">
-          <span class="project-row__index">03</span>
-          <div>
-            <div class="project-row__name">ASP Hiep Cuong Industrial Park</div>
-            <div class="project-row__loc">Hung Yen</div>
-          </div>
-          <div class="project-row__area">410<span>hectares</span></div>
-        </a>
-        <a href="portfolio-canh-thuy.html" class="project-row" data-project="canh-thuy" style="text-decoration:none;color:inherit;">
-          <span class="project-row__index">04</span>
-          <div>
-            <div class="project-row__name">ASP Canh Thuy Industrial Park</div>
-            <div class="project-row__loc">Bac Ninh</div>
-          </div>
-          <div class="project-row__area">280<span>hectares</span></div>
-        </a>
+        <div class="project-list__scroll">
+          <a href="portfolio-quang-yen.html" class="project-row" data-project="quang-yen">
+            <span class="project-row__index">01</span>
+            <div>
+              <div class="project-row__name">ASP Quang Yen Industrial Park</div>
+              <div class="project-row__loc">Quang Ninh · <em class="row-type">Industrial</em></div>
+            </div>
+            <div class="project-row__area">1,192<span>hectares</span></div>
+          </a>
+          <a href="portfolio-diem-thuy.html" class="project-row" data-project="diem-thuy">
+            <span class="project-row__index">02</span>
+            <div>
+              <div class="project-row__name">ASP Diem Thuy Industrial Park</div>
+              <div class="project-row__loc">Thai Nguyen · <em class="row-type">Industrial</em></div>
+            </div>
+            <div class="project-row__area">353.5<span>hectares</span></div>
+          </a>
+          <a href="portfolio-hiep-cuong.html" class="project-row" data-project="hiep-cuong">
+            <span class="project-row__index">03</span>
+            <div>
+              <div class="project-row__name">ASP Hiep Cuong Industrial Park</div>
+              <div class="project-row__loc">Hung Yen · <em class="row-type">Industrial</em></div>
+            </div>
+            <div class="project-row__area">410<span>hectares</span></div>
+          </a>
+          <a href="portfolio-canh-thuy.html" class="project-row" data-project="canh-thuy">
+            <span class="project-row__index">04</span>
+            <div>
+              <div class="project-row__name">ASP Canh Thuy Industrial Park</div>
+              <div class="project-row__loc">Bac Ninh · <em class="row-type">Industrial</em></div>
+            </div>
+            <div class="project-row__area">280<span>hectares</span></div>
+          </a>
+          <a href="#" class="project-row" data-project="luong-tai">
+            <span class="project-row__index">05</span>
+            <div>
+              <div class="project-row__name">ASP Luong Tai III Industrial Park</div>
+              <div class="project-row__loc">Bac Ninh · <em class="row-type">Industrial</em></div>
+            </div>
+            <div class="project-row__area">286<span>hectares</span></div>
+          </a>
+          <a href="#" class="project-row" data-project="bac-giang">
+            <span class="project-row__index">06</span>
+            <div>
+              <div class="project-row__name">ASP Bac Giang Industrial Park</div>
+              <div class="project-row__loc">Bac Giang · <em class="row-type">Industrial</em></div>
+            </div>
+            <div class="project-row__area">250<span>hectares</span></div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
