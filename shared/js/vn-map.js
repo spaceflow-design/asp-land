@@ -8,12 +8,12 @@
   const mapEl = document.getElementById('vn-map');
   if (!mapEl || typeof L === 'undefined') return;
 
-  // Project locations (approximate coordinates) — industrial + office
+  // Project locations (approximate coordinates) — 6 industrial parks
   const PROJECTS = [
     {
       id: 'quang-yen',
       type: 'industrial',
-      name: 'Quang Yen Industrial Park',
+      name: 'ASP Quang Yen Industrial Park',
       province: 'Quang Ninh',
       area: '1,192 ha',
       status: 'Master planning',
@@ -23,9 +23,9 @@
     {
       id: 'diem-thuy',
       type: 'industrial',
-      name: 'Diem Thuy Industrial Park',
+      name: 'ASP Diem Thuy Industrial Park',
       province: 'Thai Nguyen',
-      area: '350 ha',
+      area: '353.5 ha',
       status: 'Operational',
       lat: 21.448,
       lng: 105.965,
@@ -33,7 +33,7 @@
     {
       id: 'hiep-cuong',
       type: 'industrial',
-      name: 'Hiep Cuong Industrial Park',
+      name: 'ASP Hiep Cuong Industrial Park',
       province: 'Hung Yen',
       area: '410 ha',
       status: 'Under construction',
@@ -43,7 +43,7 @@
     {
       id: 'canh-thuy',
       type: 'industrial',
-      name: 'Canh Thuy Industrial Park',
+      name: 'ASP Canh Thuy Industrial Park',
       province: 'Bac Ninh',
       area: '280 ha',
       status: 'Master planning',
@@ -51,14 +51,24 @@
       lng: 106.197,
     },
     {
-      id: 'central-hanoi',
-      type: 'office',
-      name: 'ASP Giảng Võ Complex',
-      province: 'Hanoi CBD',
-      area: '60,000 sqm GFA',
-      status: 'Pre-leasing',
-      lat: 21.028,
-      lng: 105.804,
+      id: 'luong-tai',
+      type: 'industrial',
+      name: 'ASP Luong Tai III Industrial Park',
+      province: 'Bac Ninh',
+      area: '286 ha',
+      status: 'Master planning',
+      lat: 21.115,
+      lng: 106.100,
+    },
+    {
+      id: 'bac-giang',
+      type: 'industrial',
+      name: 'ASP Bac Giang Industrial Park',
+      province: 'Bac Giang',
+      area: '250 ha',
+      status: 'Master planning',
+      lat: 21.298,
+      lng: 106.194,
     },
   ];
 
