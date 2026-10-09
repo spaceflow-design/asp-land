@@ -81,26 +81,11 @@
     attributionControl: true,
   });
 
-  // CartoDB light + monochrome — keeps editorial mood
-  L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
-    {
-      attribution: '© OpenStreetMap, © CARTO',
-      subdomains: 'abcd',
-      maxZoom: 19,
-    }
-  ).addTo(map);
-
-  // Add custom label layer on top
-  L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
-    {
-      attribution: '',
-      subdomains: 'abcd',
-      maxZoom: 19,
-      pane: 'overlayPane',
-    }
-  ).addTo(map);
+  // OpenStreetMap (key-free). The muted look comes from a CSS filter on .leaflet-tile-pane.
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19,
+  }).addTo(map);
 
   const markers = [];
 

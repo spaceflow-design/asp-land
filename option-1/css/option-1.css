@@ -832,6 +832,9 @@ body {
   background: var(--color-bg-soft) !important;
   font-family: var(--font-body) !important;
 }
+.leaflet-tile-pane {
+  filter: grayscale(0.6) saturate(0.7) opacity(0.9);
+}
 .leaflet-control-attribution {
   background: rgba(255,255,255,0.7) !important;
   font-size: 10px !important;
